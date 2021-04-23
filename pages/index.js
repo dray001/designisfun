@@ -1,5 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import LandingSection from '../components/homePageSections/landingPageSec'
+import RecentLectureSection from '../components/homePageSections/recentLecture'
+import {homePageData} from '../data/homePageData'
+
+let secOne = homePageData.data[0];
 
 export default function Home() {
   return (
@@ -14,10 +19,16 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
+        <LandingSection data={secOne.section} style={styles.test} />
+        <RecentLectureSection />
+
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
+
+
+        {/* </LandingSection>  */}
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
