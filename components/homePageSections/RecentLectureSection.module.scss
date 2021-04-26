@@ -1,0 +1,13 @@
+@import '/styles/commonStyle.scss';
+
+.recentLecSection {
+    background-color: unset;
+
+    .recentLecDataWrapper {
+      @include displaySettings();
+      
+      .stringsDataWrapper {
+        @include stringsWrapperDefault;
+      }
+    }
+  }

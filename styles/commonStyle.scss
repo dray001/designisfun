@@ -1,0 +1,23 @@
+@mixin for-tablet-only {
+    @media only screen and (min-width: 600px) { @content; }
+}
+
+@mixin for-desktop-only {
+    @media only screen and (min-width: 1025px) { @content; }
+}
+
+@mixin for-tinnyP-only {
+    @media only screen and (max-width: 320px) { @content; }
+}
+
+@mixin stringsWrapperDefault($max-width-value: 550px) {
+    max-width: $max-width-value;
+}
+
+@mixin displaySettings($display-value: flex, $direction: row ) {
+    display: $display-value;
+    flex-direction: $direction;
+    justify-content: space-between;
+    width: 100%;
+    background: rgb(194, 146, 146);
+}
