@@ -1,0 +1,108 @@
+@keyframes slideOne {
+    from {
+      transform: translateY(-200px);
+    }
+    
+    to {
+      transform: translateY(-416px);
+    }
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateY(0px);
+    }
+    
+    to {
+      transform: translateY(-400px);
+    }
+  }
+  
+  @keyframes scaleDance {
+    0%, 100% {
+      transform: scale(1);
+    }
+    
+    50% {
+      transform: scale(1.2);
+    }
+  }
+
+  .illustrationWrapper {
+      position: relative;
+      
+      .cardWrapper {
+        position: absolute;
+        background: unset;
+        display: inline-block;
+        transform: scale(1.2);
+        padding: 20px;
+        top: 20px;
+        left: -180px;
+        overflow: hidden;
+        height: 150px;
+        width: 224px;
+    
+        .cardHolder {
+        position: absolute;
+        top: 224px;
+        .card {
+            padding-bottom: 18px;
+        }
+        
+        &.one {
+            animation: slideOne 16.4s linear 1;
+            // transform: translateY(-200px);
+            .card {
+            &:nth-child(2) {
+            animation: scaleDance 8s  linear infinite;
+            }
+            
+            &:nth-child(3) {
+            animation: scaleDance 8s 4s  linear infinite;
+            }
+            }
+        }
+        
+        &.two {
+            animation: slide 32s 0.2s linear infinite;
+            // transform: translateY(-200px);
+            .card {
+            &:nth-child(1) {
+            animation: scaleDance 8s  linear infinite;
+            }
+            
+            &:nth-child(2) {
+            animation: scaleDance 8s 4s  linear infinite;
+            }
+            
+            &:nth-child(3) {
+            animation: scaleDance 8s 8s  linear infinite;
+            }
+            }
+        }
+        
+        &.three {
+            animation: slide 32s 16.2s linear infinite;
+            // transform: translateY(-200px);
+            .card {
+            &:nth-child(1) {
+            animation: scaleDance 8s  linear infinite;
+            }
+            
+            &:nth-child(2) {
+            animation: scaleDance 8s 4s  linear infinite;
+            }
+            
+            &:nth-child(3) {
+            animation: scaleDance 8s 8s  linear infinite;
+            }
+            }
+        }
+        }
+  }
+
+
+  }
+  
+  

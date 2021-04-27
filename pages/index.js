@@ -1,5 +1,5 @@
-import LandingSection from '../components/homePageSections/LandingSection'
-import RecentLectureSection from '../components/homePageSections/RecentLectureSection'
+import LandingSection from '../components/homePageSections/LandingSection/LandingSection'
+import RecentLectureSection from '../components/homePageSections/recentLectures/RecentLectureSection'
 import Layout from '../components/Layout'
 import {homePageData} from '../data/homePageData'
 

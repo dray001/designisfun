@@ -1,0 +1,41 @@
+@import '/styles/commonStyle.scss';
+
+.recentLecSection {
+    background-color: #EFEFE7;
+    height: 30vh;
+
+    .recentLecDataWrapper {
+      @include displaySettings();
+      background: #ffff;
+      padding: 32px;
+      border-radius: 16px;
+      
+      .stringsDataWrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        & > div:first-child {
+          display: flex;
+          width: auto;
+
+          h2 {
+            width: auto;
+            margin-right: 32px;
+          }
+
+          p {
+             width: 400px;
+          }
+        }
+
+        & > div:last-child {
+          a {
+            border: 1px solid;
+            padding: 8px 16px;
+            border-radius: 16px;
+          }
+        }
+      }
+    }
+  }

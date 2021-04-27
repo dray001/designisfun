@@ -10,14 +10,80 @@
     @media only screen and (max-width: 320px) { @content; }
 }
 
-@mixin stringsWrapperDefault($max-width-value: 550px) {
+@keyframes flashes {
+    0% {
+        transform: rotate(25deg) translateX(-130px);
+    }
+
+    8% {
+        transform: rotate(25deg) translateX(10px);
+    }
+
+    100% {
+        transform: rotate(25deg) translateX(10px);
+    }
+}
+
+.buttonsWrapper {
+    display: flex;
+    margin-top: 40px;
+
+    .primaryButton {
+    overflow: hidden;
+    border-radius: 48px;
+    margin-right: 24px;
+
+        a {
+        padding: 16px 24px;
+        display: inline-block;
+        border-radius: 48px;
+        position: relative;
+        background: #000000;
+        color: white;  
+            &:after {
+                content: '';
+                position: absolute;
+                height: 180px;
+                width: 16px;
+                background: #FFFFF5;
+                top: -10px;
+                // mix-blend-mode: screen;
+                animation: flashes 6s infinite ease-out;
+                transform-origin: 50% 50%;
+                transform: rotate(25deg) translateX(-30px);
+            }
+        }
+    }
+
+    .secondaryButton {
+        a {
+            padding: 14px 24px;
+            display: inline-block;
+            border-radius: 48px;
+            position: relative;
+            border: 2px solid;
+        }
+    }
+}
+
+
+
+
+// this is the default styles for divs that contains heading, paragraphes and call to action
+
+@mixin stringsWrapperDefault($max-width-value: 520px) {
     max-width: $max-width-value;
 }
 
+// this is the default styles for div parent wrappers
+
 @mixin displaySettings($display-value: flex, $direction: row ) {
-    display: $display-value;
-    flex-direction: $direction;
-    justify-content: space-between;
-    width: 100%;
-    background: rgb(194, 146, 146);
+    display: block;
+
+    @include for-desktop-only {
+        display: $display-value;
+        flex-direction: $direction;
+        justify-content: space-between;
+        width: 100%;
+    }
 }

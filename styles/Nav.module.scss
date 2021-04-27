@@ -3,8 +3,17 @@
     background: #000;
     color: #fff;
     display: flex;
+    width: 100%;
+    position: fixed;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+
+    .logo {
+      width: 200px;
+      svg {
+        width: 100%;
+      }
+    }
 
     ul {
       display: flex;
@@ -16,4 +25,12 @@
         margin: 5px 15px;
       }
     }
+
+    .actionButtonWrapper {
+      a {
+          border: 1px solid white;
+          padding: 8px 24px;
+          border-radius: 50px;
+      }
+    } 
   }

@@ -1,4 +1,5 @@
 import styles from './RecentLectureSection.module.scss'
+import Link from 'next/link'
 
 const RecentLectureSection =({data})=> {
     return (
@@ -7,12 +8,15 @@ const RecentLectureSection =({data})=> {
         <div className={styles.recentLecDataWrapper}>
 
             <div className={styles.stringsDataWrapper}>
-                <h1>{data.title} </h1>
-                <p>{data.description}</p>
-            </div>
+                <div>
+                    <div>{data.icon}</div>
+                    <h2>{data.title} </h2>
+                    <p>{data.description}</p>
+                </div>
 
-            <div className={styles.imageDataWrapper}>
-                <img src="/" alt="img"/>
+                <div>
+                    <Link href={data.path}> watch </Link>
+                </div>
             </div>
             
         </div>
