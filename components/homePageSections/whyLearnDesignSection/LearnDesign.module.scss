@@ -1,0 +1,39 @@
+@import '/styles/commonStyle.scss';
+
+.learnDesignSection {
+  height: 100vh;
+  overflow: hidden;
+
+  .learnDesignSecDataWrapper {
+    @include displaySettings(flex, row-reverse);
+    align-items: center;
+
+      .stringsDataWrapper {
+        @include stringsWrapperDefault(450px);
+        z-index: 1;
+
+        h1 {
+          position: relative;
+          width: 400px;
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -2;
+            opacity: 1;
+            width: 80%;
+            height: 40px;
+            left: -15px;
+            top: 76%;
+            background: #FEFE6B;
+          }
+        }
+      }
+
+      .imageDataWrapper {
+        svg {
+          transform: scale(1);
+        }
+      }
+  }
+}

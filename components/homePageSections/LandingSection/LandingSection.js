@@ -1,5 +1,6 @@
 import styles from './LandingSection.module.scss'
 import Link from 'next/link'
+import ActionButton from '../../ActionButton'
 import LandingIllustration from '../../interactiveIllustrations/LandingIllustration'
 
 const LandingSection =({data})=> {
@@ -11,15 +12,7 @@ const LandingSection =({data})=> {
                 <h1>{data.title} </h1>
                 <p>{data.description}</p>
 
-                <div className={styles.buttonsWrapper}>
-                    <div className={styles.primaryButton}>
-                        <Link href='/'> Learn Design </Link>
-                    </div>
-                    <div className={styles.secondaryButton}>
-                        <Link href='/'> See Lesson Plan </Link>
-                    </div>
-                </div>
-
+                <ActionButton secondary={true} />
                 
             </div>
 

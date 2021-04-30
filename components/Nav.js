@@ -32,7 +32,6 @@ const Nav = () => {
             </li>
           )
         }
-        <li className={navStyles.actionButtonWrapper}><Link href=''>Learn Design</Link></li>
       </ul>
 
     </nav>

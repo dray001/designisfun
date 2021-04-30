@@ -1,5 +1,5 @@
 import styles from './RecentLectureSection.module.scss'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 const RecentLectureSection =({data})=> {
     return (
@@ -15,7 +15,7 @@ const RecentLectureSection =({data})=> {
                 </div>
 
                 <div>
-                    <Link href={data.path}> watch </Link>
+                    <a href={data.path}> watch </a>
                 </div>
             </div>
             

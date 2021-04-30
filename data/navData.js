@@ -27,16 +27,17 @@ export const NavData = {
         },
 
         {
-            id: '3',
-            label: 'About Author',
-            path: '/'
+            id: '4',
+            label: 'Mission',
+            path: '/#goals'
         },
 
         {
-            id: '4',
-            label: 'Donation',
+            id: '3',
+            label: 'About Author',
             path: '/'
         }
+
     ],
 
 

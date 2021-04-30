@@ -3,26 +3,28 @@
 .landingSection {
   background: #FFFFF5;
   display: block;
-  height: 70vh;
-  padding-top: 200px;
+  height: 76vh;
+  padding-top: 180px;
   overflow: hidden;
 
   .landingSecDataWrapper {
     @include displaySettings();
 
       .stringsDataWrapper {
-        @include stringsWrapperDefault();
+        @include stringsWrapperDefault(40%);
         z-index: 1;
 
         h1 {
           position: relative;
+          max-width: 35%;
           &:before {
             position: absolute;
             content: '';
                 position: absolute;
-                height: 180px;
-                width: 180px;
-                top: 0;
+                height: 200px;
+                width: 200px;
+                top: -30px;
+                left: -30px;
                 z-index: -1;
                 border-radius: 100%;
                 background: #FEFE6B;
@@ -30,9 +32,8 @@
         }
       }
 
-      .imageDataWrapper {
-        // position: relative;
-        transform: translateX(60px);
-      }
+      // .imageDataWrapper {
+      //   transform: translateX(40px);
+      // }
   }
 }

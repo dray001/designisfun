@@ -1,7 +1,10 @@
+@import '/styles/commonStyle.scss';
+
 html,
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
   position: relative;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -16,13 +19,15 @@ a {
 p {
   font-size: 16px;
   line-height: 1.6;
+  font-weight: 400;
   /* width: 100%; */
 }
 
 h1 {
   font-size: 52px;
-  max-width: 450px;
+  max-width: 100%;
   margin: 0;
+  margin-bottom: 32px;
 }
 
 h2, h3, h4, h6, p {
@@ -38,14 +43,29 @@ h2, h3, h4, h6, p {
 
 main > section {
   height: 80vh;
-  padding: 0 16%;
-  display: flex;
   align-items: center;
   background: #ffff;
+
+  @include for-desktop-only {
+    padding: 0 10%;
+    display: flex;
+  }
+
+  @include for-desktopX-only {
+    padding: 0 16%;
+  }
 }
 
 nav {
-  padding: 32px 16%;
+  padding: 48px 16%;
   position: sticky;
   z-index: 20;
+
+  @include for-desktop-only {
+    padding: 0 10%;
+  }
+
+  @include for-desktopX-only {
+    padding: 32px 16%;
+  }
 }
