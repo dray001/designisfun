@@ -1,0 +1,22 @@
+.sectionTitle {
+  font-weight: bold;
+  font-size: 56px;
+  color: var(--textTitle);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 32px;
+  opacity: 1;
+
+  &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -2;
+      opacity: 1;
+      width: 80%;
+      height: 50%;
+      right: -10px;
+      top: 60%;
+      background-color: var(--headingAccent);
+  }
+}

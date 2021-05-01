@@ -1,0 +1,72 @@
+@import '/styles/commonStyle.scss';
+
+.aboutAuthorSection {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #FFFFF5;
+
+  .aboutAuthorSecDataWrapper {
+    @include displaySettings();
+    align-items: center;
+
+      .stringsDataWrapper {
+        @include stringsWrapperDefault(450px);
+        z-index: 1;
+
+        .authorPerson {
+          margin-bottom: 16px;
+
+          h2 {
+            font-size: 40px;
+          }
+
+        }
+
+        .socialHolder {
+          border-top: 1px solid #BABABA;
+          margin-top: 32px;
+          padding-top: 24px;
+
+          a {
+            margin-right: 16px;
+          }
+        }
+
+        p {
+          margin-bottom: 8px;
+        }
+
+        h1 {
+          position: relative;
+          width: 400px;
+          z-index: 10;
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            opacity: 1;
+            width: 80%;
+            height: 40px;
+            left: -15px;
+            top: 50%;
+            background: #FEFE6B;
+          }
+        }
+
+        
+      }
+
+      .imageDataWrapper {
+        height: 100%;
+        width: 60vh;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #FBF9E5;
+        img {
+          width: 100%;
+          transform: scale(1.2) translateY(60px);
+        }
+      }
+  }
+}

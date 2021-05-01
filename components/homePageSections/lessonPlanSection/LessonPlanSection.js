@@ -7,17 +7,14 @@ const LessonPlanSection =({data})=> {
         <div className={styles.lessonPlanSecDataWrapper}>
 
             <div className={styles.stringsDataWrapper}>
-                <h1>{data.title} </h1>
-                <p>{data.description}</p> 
-
-                <ActionButton />   
+                <h1>{data.title} </h1>  
             </div>
 
             <div className={styles.listedCardsDataWrapper}>
                 {
                     data.planList.map((card)=> (
                     <div className={styles.CardDataWrapper}>
-                        <div>{card.label}</div>
+                        <span>{card.label}</span>
                         <h3>{card.title}</h3>
                         <span>Topics to be covered:</span>
                         <ul>
@@ -28,7 +25,13 @@ const LessonPlanSection =({data})=> {
                     </div>
                     ))
                 }
-            </div>      
+            </div>  
+
+            <div className={styles.feeCost}>
+                <span>Any Fee?</span>
+                <p>{data.description}</p> 
+                <ActionButton />   
+            </div>    
         </div>
     </section>
     )
