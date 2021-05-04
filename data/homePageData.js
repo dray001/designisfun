@@ -57,20 +57,7 @@ const youtubeIcon = <svg width="48" height="48" viewBox="0 0 48 48" fill="none" 
 
 
 // learnDesignSectionAssests
-const imgMockup = <svg width="430" height="420" viewBox="0 0 430 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="430" height="420">
-                    <rect width="430" height="420" rx="14.2739" fill="#FDFBE1"/>
-                    </mask>
-                    <g mask="url(#mask0)">
-                    <rect width="430" height="420" rx="14.2739" fill="#FCF6C7"/>
-                    <path d="M73.8879 222.191L232.527 420.332H-84.751L73.8879 222.191Z" fill="#AB9A01"/>
-                    <path d="M299.605 155.489L499.863 420.332H99.3484L299.605 155.489Z" fill="#AB9A01"/>
-                    <path d="M73.7451 222.191L131.664 420.332H-84.751L73.7451 222.191Z" fill="#168813"/>
-                    <path d="M299.441 155.489L372.56 420.332H99.3484L299.441 155.489Z" fill="#168813"/>
-                    <ellipse cx="160.581" cy="89.3617" rx="43.7137" ry="43.7872" fill="#F8EB6F"/>
-                    </g>
-                  </svg>
-
+const imgMockup = 'https://res.cloudinary.com/dramages/image/upload/v1620046304/portfolioImages/designisfun/homepage/pyramid.png'
 
 // goalsSectionAssests
 const organicPen = <svg width="80" height="81" viewBox="0 0 80 81" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,6 +99,8 @@ const authorLinkedIn =  <svg width="32" height="32" viewBox="0 0 32 32" fill="no
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0ZM7.68112 13.2519H11.3071V24.1464H7.68112V13.2519ZM11.5458 9.8818C11.5223 8.8136 10.7584 8 9.51802 8C8.27761 8 7.46667 8.8136 7.46667 9.8818C7.46667 10.9279 8.25364 11.7649 9.47095 11.7649H9.49413C10.7584 11.7649 11.5458 10.9279 11.5458 9.8818ZM20.2088 12.9961C22.5948 12.9961 24.3836 14.5535 24.3836 17.8998L24.3834 24.1464H20.7576V18.3178C20.7576 16.8538 20.2329 15.8548 18.9203 15.8548C17.9186 15.8548 17.3219 16.5283 17.0599 17.1788C16.964 17.4119 16.9404 17.7367 16.9404 18.0623V24.1467H13.3141C13.3141 24.1467 13.3619 14.2745 13.3141 13.2522H16.9404V14.7953C17.4217 14.0535 18.2836 12.9961 20.2088 12.9961Z" fill="#575757"/>
                         </svg>
 
+const classLink = 'https://classroom.google.com/c/MzI5NTEzNDA2NjIx?cjc=erjv4bl'
+
 
 
 export const homePageData = {
@@ -143,7 +132,7 @@ export const homePageData = {
         {
             id: 4,
             section: 'goals',
-            title: 'The Goal',
+            title: 'Objective',
             description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit sed orci et purus amet. Ullamcorper in lectus suspendisse non, et in quam phasellus. 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit sed orci et porus amet.`,
             goalList: [
@@ -171,6 +160,7 @@ export const homePageData = {
             id: 5,
             section: 'lesson plan',
             title: 'Lesson Plan',
+            classLink: classLink,
             description: `Nope! just an optional monthly donation, to help make quality educative content \n 
             for a better learning experience.`,
             planList: [

@@ -9,10 +9,10 @@ const LandingSection =({data})=> {
         <div className={styles.landingSecDataWrapper}>
 
             <div className={styles.stringsDataWrapper}>
-                <h1>{data.title} </h1>
+                <h1>Design Fundamentals <br/> for all </h1>
                 <p>{data.description}</p>
 
-                <ActionButton secondary={true} />
+                <ActionButton path='/#plan' />
                 
             </div>
 

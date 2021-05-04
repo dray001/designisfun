@@ -3,7 +3,7 @@ import ActionButton from '../../ActionButton'
 
 const LessonPlanSection =({data})=> {
     return (
-    <section className={styles.lessonPlanSection}>
+    <section id='plan' className={styles.lessonPlanSection}>
         <div className={styles.lessonPlanSecDataWrapper}>
 
             <div className={styles.stringsDataWrapper}>
@@ -30,7 +30,7 @@ const LessonPlanSection =({data})=> {
             <div className={styles.feeCost}>
                 <span>Any Fee?</span>
                 <p>{data.description}</p> 
-                <ActionButton />   
+                <ActionButton path={data.classLink} label='Attend Class'  />   
             </div>    
         </div>
     </section>

@@ -1,61 +1,79 @@
 @import '/styles/commonStyle.scss';
 
 .aboutAuthorSection {
-  height: 100vh;
-  overflow: hidden;
+  height: unset;
   background-color: #FFFFF5;
 
   .aboutAuthorSecDataWrapper {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .stringsDataWrapper {
+      width: 100%;
+      z-index: 1;
+
+      .authorPerson {
+        margin-bottom: 16px;
+
+        h2 {
+          font-size: 32px;
+        }
+
+      }
+
+      .socialHolder {
+        border-top: 1px solid #BABABA;
+        margin-top: 32px;
+        padding-top: 24px;
+
+        a {
+          margin-right: 16px;
+        }
+      }
+
+      p {
+        margin-bottom: 8px;
+      }
+
+      h1 {
+        text-align: left;
+      } 
+    }
+
+    .imageDataWrapper {
+      height: 200px;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #FBF9E5;
+      margin-bottom: 48px;
+      img {
+        width: 100%;
+        transform: scale(1);
+      }
+    }
+  }
+
+  @include for-desktop-only {
+    height: 100vh;
+    overflow: hidden;
+
+    .aboutAuthorSecDataWrapper {
     @include displaySettings();
     align-items: center;
 
-      .stringsDataWrapper {
-        @include stringsWrapperDefault(450px);
-        z-index: 1;
+    .stringsDataWrapper {
+      @include stringsWrapperDefault(450px);
+      z-index: 1;
 
-        .authorPerson {
-          margin-bottom: 16px;
+      .authorPerson {
+        margin-bottom: 16px;
 
-          h2 {
-            font-size: 40px;
-          }
-
+        h2 {
+          font-size: 40px;
         }
-
-        .socialHolder {
-          border-top: 1px solid #BABABA;
-          margin-top: 32px;
-          padding-top: 24px;
-
-          a {
-            margin-right: 16px;
-          }
-        }
-
-        p {
-          margin-bottom: 8px;
-        }
-
-        h1 {
-          position: relative;
-          width: 400px;
-          z-index: 10;
-          &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            z-index: -1;
-            opacity: 1;
-            width: 80%;
-            height: 40px;
-            left: -15px;
-            top: 50%;
-            background: #FEFE6B;
-          }
-        }
-
-        
       }
+    }
 
       .imageDataWrapper {
         height: 100%;
@@ -68,5 +86,6 @@
           transform: scale(1.2) translateY(60px);
         }
       }
+    }
   }
 }

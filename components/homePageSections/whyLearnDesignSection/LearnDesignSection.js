@@ -7,7 +7,7 @@ const LearnDesignSection =({data})=> {
         <div className={styles.learnDesignSecDataWrapper}>
 
             <div className={styles.stringsDataWrapper}>
-                <h1>{data.title} </h1>
+                <h1>Why Learn <br /> Design </h1>
                 <p>{data.description}</p>
 
                 <div className={styles.buttonsWrapper}>
@@ -15,13 +15,11 @@ const LearnDesignSection =({data})=> {
                         <Link href='/'> See Lesson Plan </Link>
                     </div>
                 </div>
-
                 
             </div>
 
             <div className={styles.imageDataWrapper}>
-                {/* <img src={data.image} alt="image"/> */}
-                {data.image}
+                <img src={data.image} alt="image"/>
             </div>      
         </div>
     </section>

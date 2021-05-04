@@ -25,10 +25,43 @@ p {
 }
 
 h1 {
-  font-size: 56px;
-  max-width: 100%;
+  font-size: 46px;
+  min-width: 80%;
+  text-align: center;
   margin: 0;
   margin-bottom: 32px;
+  z-index: 1;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -2;
+    opacity: 1;
+    width: 55%;
+    height: 50px;
+    left: 0%;
+  bottom: -18px;
+    background: #FEFE6B;
+  }
+
+  @include for-tinnyP-only {
+    font-size: 40px;
+  }
+
+  @include for-tablet-only {
+    margin-bottom: 40px;
+    min-width: 70%;
+    max-width: 80%;
+    font-size: 56px;
+
+    &:after {
+      width: 110%;
+      left: -5%;
+      bottom: -20px;
+    }
+  }
 }
 
 h2, h3, h4, h6, p {
@@ -40,16 +73,29 @@ h2, h3, h4, h6, p {
   box-sizing: border-box;
 }
 
+main {
+  width: 100%;
+  display: block;
+}
+
 /* styles for direct children of the main tags (sections) ⇣ */
 
 main > section {
-  height: 80vh;
-  align-items: center;
   background: #ffff;
+  display: block;
+  width: 100%;
+  padding: 52px 32px;
+
+  @include for-tablet-only {
+    padding: 0 10%;
+  }
 
   @include for-desktop-only {
-    padding: 0 10%;
+    height: 80vh;
+    align-items: center;
     display: flex;
+    justify-content: center;
+    padding: 0 10%;
   }
 
   @include for-desktopX-only {
@@ -58,8 +104,7 @@ main > section {
 }
 
 nav {
-  padding: 48px 16%;
-  position: sticky;
+  padding: 32px;
   z-index: 20;
 
   @include for-desktop-only {

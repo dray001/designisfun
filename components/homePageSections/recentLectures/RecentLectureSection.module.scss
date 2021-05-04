@@ -2,40 +2,105 @@
 
 .recentLecSection {
     background-color: #EFEFE7;
-    height: 24vh;
+    height: unset;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     .recentLecDataWrapper {
-      @include displaySettings();
+      display: block;
       background: #ffff;
-      padding: 32px;
+      padding: 24px;
       border-radius: 16px;
-      
+      position: relative;
+
+      .iconWrapper {
+        position: absolute;
+        right: 24px;
+        bottom: 24px;
+      }
+
       .stringsDataWrapper {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
+        display: block;
 
-        & > div:first-child {
-          display: flex;
+        .labelWrapper {
+          background: #E6E6E6;
+          border-radius: 16px;
           width: auto;
+          display: inline-block;
+          padding: 8px 12px;
+          margin-bottom: 8px;
+        }
 
+        .descriptionWrapper {
+          display: block;
+          width: 100%; 
+          
           h2 {
             width: auto;
             margin-right: 32px;
+            margin-bottom: 8px;
           }
 
           p {
-             width: 400px;
+            width: auto;
+            margin-bottom: 16px;
           }
         }
 
         & > div:last-child {
           a {
+            display: inline-block;
             border: 1px solid;
-            padding: 8px 16px;
-            border-radius: 16px;
+            padding: 16px 48px;
+            border-radius: 24px;
+            font-weight: 600;
           }
         }
       }
     }
+
+    @include for-desktop-only {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .recentLecDataWrapper {
+        @include displaySettings();
+        padding: 32px;
+
+        .iconWrapper {
+          position: unset;
+        }
+        
+        .stringsDataWrapper {
+          display: block;
+          width: 100%;
+          position: relative;
+          margin-left: 32px;
+
+          .descriptionWrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%; 
+            
+            h2 {
+              width: auto;
+              margin-right: 32px;
+            }
+
+            p {
+              width: auto;
+              margin-bottom: 0;
+            }
+          }
+
+          & > div:last-child {
+            a {
+              border: 1px solid;
+              padding: 16px 24px;
+              border-radius: 24px;
+            }
+          }
+        }
+      }
+    } 
   }

@@ -1,10 +1,45 @@
 @import '/styles/commonStyle.scss';
 
 .learnDesignSection {
-  height: 100vh;
-  overflow: hidden;
+  height: unset;
 
   .learnDesignSecDataWrapper {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .stringsDataWrapper {
+      width: 100%;
+      display: block;
+      z-index: 1;
+
+      h1 {
+        text-align: left;
+      }
+    }
+
+    .imageDataWrapper {
+      background: #FCF6C7;
+      padding: 32px;
+      border-radius: 16px;
+      overflow: hidden;
+      width: 100%;
+      height: 200px;
+      margin-bottom: 40px;
+
+      img {
+        width: 500px;
+        height: auto;
+        transform: scale(0.6) translate(-40px,-120px);
+      }
+    }
+  }
+
+
+  @include for-desktop-only {
+    height: 100vh;
+    overflow: hidden;
+
+    .learnDesignSecDataWrapper {
     @include displaySettings(flex, row-reverse);
     align-items: center;
 
@@ -13,27 +48,26 @@
         z-index: 1;
 
         h1 {
-          position: relative;
-          width: 400px;
-          &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            z-index: -2;
-            opacity: 1;
-            width: 80%;
-            height: 40px;
-            left: -15px;
-            top: 76%;
-            background: #FEFE6B;
-          }
+          text-align: left;
         }
       }
 
       .imageDataWrapper {
-        svg {
-          transform: scale(1);
+        background: #FCF6C7;
+        padding: 32px;
+        border-radius: 16px;
+        overflow: hidden;
+        width: 430px;
+        height: 420px;
+
+        img {
+          width: 500px;
+          height: auto;
+          transform: scale(1.2) translate(-40px,40px);
         }
       }
   }
+  }
+
+  
 }

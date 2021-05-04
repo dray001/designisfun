@@ -120,7 +120,7 @@ const LandingIllustration =({illustration})=> {
                 </div>
             </div>
 
-            <div>
+            <div className="character">
                 {illustration}
             </div>
         </div>

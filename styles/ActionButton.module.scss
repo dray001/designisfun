@@ -1,3 +1,5 @@
+@import '/styles/commonStyle.scss';
+
 @keyframes flashes {
   0% {
       transform: rotate(25deg) translateX(-130px);
@@ -15,7 +17,7 @@
 
 .buttonsWrapper {
   display: flex;
-  margin-top: 16px;
+  margin-top: 24px;
 
   .primaryButton {
   overflow: hidden;
@@ -53,5 +55,9 @@
           position: relative;
           border: 2px solid;
       }
+  }
+
+  @include for-desktop-only {
+    margin-top: 24px;
   }
 }

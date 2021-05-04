@@ -1,18 +1,18 @@
-import Link from 'next/link'
+// import Link from 'next/link'
 import styles from '../styles/ActionButton.module.scss'
 
 
-const ActionButton = ({primary, secondary}) => {
+const ActionButton = ({label, path}) => {
   return (
     <div className={styles.buttonsWrapper}>
         <div className={styles.primaryButton}>
-            <Link href='/'> Learn Design </Link>
+            <a href={path}> {label ? label : "See Lesson Plan"} </a>
         </div>
-        {
+        {/* {
           secondary===true ? <div className={styles.secondaryButton}>
-          <Link href='/'> See Lesson Plan </Link>
+          <Link href='/'> {} </Link>
       </div> : ''
-        }
+        } */}
     </div>
   )
 }
