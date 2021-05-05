@@ -29,9 +29,9 @@ const Nav = () => {
     }
   }
 
-  // const closeMenu =()=> {
-  //  setOpenstate(false);
-  // }
+  const closeMenu =()=> {
+   setOpenstate(false);
+  }
 
 
   return (
@@ -67,7 +67,30 @@ const Nav = () => {
         </div>
       </div>
 
-      <div className={openState ? 'hambugerModal' : 'hambugerModal off' }>
+      {/* mobileNavWrapper */}
+
+      <div onClick={closeMenu} className={openState ? 'hambugerModal' : 'hambugerModal off' }>
+        <div className={openState ? 'mobileNavWrapper on' : 'mobileNavWrapper' }>
+          <ul className="navLinksMobileWrapper">
+            {
+              navLinks.map((link) => 
+                <li>
+                  <Link href={link.path}><a onClick={toggleMenu} >{link.label}</a></Link>
+                </li>
+              )
+            }
+          </ul>
+
+          <ul className="socialLinksMobileWrapper">
+            {
+              socialLinks.map((link) => 
+                <li>
+                  <a href={link.path}>{link.icon}</a>
+                </li>
+              )
+            }
+          </ul>
+        </div>
       </div>
 
     </nav>
