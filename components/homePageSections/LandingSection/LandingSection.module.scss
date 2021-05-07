@@ -16,10 +16,11 @@
         text-align: left;
         z-index: 1;
         margin-bottom: 24px;
+        max-width: 80%;
 
         &:after {
           position: absolute;
-          z-index: -100;
+          z-index: -3;
           content: '';
           position: absolute;
           height: 200px;
@@ -32,7 +33,7 @@
       }
 
       p {
-        z-index: 200;
+        z-index: 2;
       }
     }
 
@@ -42,7 +43,7 @@
    }
 
 @include for-desktop-only {
-  height: 66vh;
+  height: 80vh;
   overflow: hidden;
   @include displaySettings();
 
@@ -63,6 +64,10 @@
         transform: translateY(116px);
       }
   }
+}
+
+@include for-desktopX-only {
+  height: 66vh;
 }
 
   

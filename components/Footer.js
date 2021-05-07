@@ -9,21 +9,22 @@ const footerLogo = 'https://res.cloudinary.com/dramages/image/upload/v1619842434
 const Footer = () => {
   return (
     <footer className={navStyles.footer}>
-      <div className={navStyles.logo}>
-        <img src={footerLogo} alt="logo"/>
+      <div className={navStyles.copyRightInfo}>
+        <p> DesignIsFun ©2021. Inspired by the Universe </p>
       </div>
-      <p>Inspired by the universe © 2020</p>
 
-      <ul className={navStyles.socialLinksWrapper}>
-        {
-          socialLinks.map((link) => 
-            <li>
-              <a href={link.path}>{link.iconFooter}</a>
-            </li>
-          )
-        }
-      </ul>
-
+      <div className={navStyles.socialLinksWrapper}>
+        <p>Kindly follow and subscribe for educative design topics</p>
+        <ul>
+          {
+            socialLinks.map((link) => 
+              <li>
+                <a href={link.path}>{link.iconFooter}</a>
+              </li>
+            )
+          }
+        </ul>
+      </div>
     </footer>
   )
 }

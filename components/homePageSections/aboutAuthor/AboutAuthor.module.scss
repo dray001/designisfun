@@ -47,6 +47,7 @@
       overflow: hidden;
       background: #FBF9E5;
       margin-bottom: 48px;
+
       img {
         width: 100%;
         transform: scale(1);
@@ -54,9 +55,23 @@
     }
   }
 
+  @include for-tablet-only {
+
+    .aboutAuthorSecDataWrapper {
+
+      .imageDataWrapper {
+        height: 50vh;
+      }
+      
+    }
+    
+  }
+
   @include for-desktop-only {
     height: 100vh;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .aboutAuthorSecDataWrapper {
     @include displaySettings();

@@ -3,7 +3,7 @@
 }
 
 @mixin for-desktop-only {
-    @media only screen and (min-width: 992px) { @content; }
+    @media only screen and (min-width: 1025px) { @content; }
 }
 
 @mixin for-desktopX-only {
@@ -27,51 +27,6 @@
         transform: rotate(25deg) translateX(10px);
     }
 }
-
-.buttonsWrapper {
-    display: flex;
-    margin-top: 24px;
-
-    .primaryButton {
-    overflow: hidden;
-    border-radius: 48px;
-    margin-right: 24px;
-
-        a {
-        padding: 16px 24px;
-        display: inline-block;
-        border-radius: 48px;
-        position: relative;
-        background: #000000;
-        color: white;  
-            &:after {
-                content: '';
-                position: absolute;
-                height: 180px;
-                width: 16px;
-                background: #FFFFF5;
-                top: -10px;
-                // mix-blend-mode: screen;
-                animation: flashes 6s infinite ease-out;
-                transform-origin: 50% 50%;
-                transform: rotate(25deg) translateX(-30px);
-            }
-        }
-    }
-
-    .secondaryButton {
-        a {
-            padding: 14px 24px;
-            display: inline-block;
-            border-radius: 48px;
-            position: relative;
-            border: 2px solid;
-        }
-    }
-}
-
-
-
 
 // this is the default styles for divs that contains heading, paragraphes and call to action
 

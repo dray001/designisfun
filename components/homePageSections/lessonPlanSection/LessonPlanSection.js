@@ -1,5 +1,5 @@
 import styles from './LessonPlan.module.scss'
-import ActionButton from '../../ActionButton'
+import ActionButton from '../../buttons/ActionButton'
 
 const LessonPlanSection =({data})=> {
     return (
@@ -30,7 +30,7 @@ const LessonPlanSection =({data})=> {
             <div className={styles.feeCost}>
                 <span>Any Fee?</span>
                 <p>{data.description}</p> 
-                <ActionButton path={data.classLink} label='Attend Class'  />   
+                <ActionButton display='primary' primaryPath={data.classLink} primaryLabel='Attend Class' />   
             </div>    
         </div>
     </section>

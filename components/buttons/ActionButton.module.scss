@@ -2,15 +2,17 @@
 
 @keyframes flashes {
   0% {
-      transform: rotate(25deg) translateX(-130px);
+    transform: translateX(-130px);
+    opacity: 1;
   }
 
   8% {
-      transform: rotate(25deg) translateX(10px);
+    transform: translateX(30px);
+    opacity: 1;
   }
 
   100% {
-      transform: rotate(25deg) translateX(10px);
+    transform: translateX(30px);
   }
 }
 
@@ -32,28 +34,23 @@
       background: #000000;
       color: white;  
           &:after {
-              content: '';
+              content: url('../buttons/icon/flash.svg');
               position: absolute;
-              height: 180px;
-              width: 16px;
-              background: #FFFFF5;
-              opacity: 0.8;
               top: -10px;
-              // mix-blend-mode: screen;
               animation: flashes 6s infinite ease-out;
               transform-origin: 50% 50%;
-              transform: rotate(25deg) translateX(-30px);
+              transform: rotate(0deg) translateX(-200px);
           }
       }
   }
 
   .secondaryButton {
       a {
-          padding: 14px 24px;
+          padding: 16px 24px;
           display: inline-block;
           border-radius: 48px;
           position: relative;
-          border: 2px solid;
+          border: 1px solid;
       }
   }
 

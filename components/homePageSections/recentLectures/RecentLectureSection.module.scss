@@ -46,16 +46,6 @@
             margin-bottom: 16px;
           }
         }
-
-        & > div:last-child {
-          a {
-            display: inline-block;
-            border: 1px solid;
-            padding: 16px 48px;
-            border-radius: 24px;
-            font-weight: 600;
-          }
-        }
       }
     }
 
@@ -90,14 +80,6 @@
             p {
               width: auto;
               margin-bottom: 0;
-            }
-          }
-
-          & > div:last-child {
-            a {
-              border: 1px solid;
-              padding: 16px 24px;
-              border-radius: 24px;
             }
           }
         }

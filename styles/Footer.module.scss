@@ -1,20 +1,60 @@
+@import '/styles/commonStyle.scss';
+
 .footer {
-    height: 50px;
-    background: white;
+    background: rgb(240, 243, 225);
     color: rgb(65, 65, 65);
-    display: flex;
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
 
-    ul {
-      display: flex;
-      justify-content: center;
+    .copyRightInfo {
+      display: inline-flex;
+
+      & > p:first-child {
+        margin-right: 40px;
+      }
+    }
+
+    .socialLinksWrapper {
+      display: block;
+      margin-top: 16px;
+      ul {
+        display: inline-flex;
+        list-style: none;
+        margin-top: 16px;
+        padding: 0;
+
+        li {
+          margin-right: 24px;
+        }
+  
+        li a {
+          padding: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 40px;
+          width: 40px;
+          border-radius: 24px;
+          background: rgb(217, 219, 205);
+        }
+      }
+    }
+
+    @include for-desktop-only {
       align-items: center;
-      list-style: none;
+      display: flex;
+      justify-content: space-between;
 
-      li a {
-        margin: 5px 15px;
+      .socialLinksWrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+        ul {
+          padding: 0;
+        }
+
+        & > p:first-child {
+          margin-right: 24px;
+        }
       }
     }
   }

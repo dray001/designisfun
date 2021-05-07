@@ -1,4 +1,5 @@
 import styles from './RecentLectureSection.module.scss'
+import ActionButton from '../../buttons/ActionButton'
 // import Link from 'next/link'
 
 const RecentLectureSection =({data})=> {
@@ -16,7 +17,7 @@ const RecentLectureSection =({data})=> {
                     </div>
 
                     <div>
-                        <a href={data.path}> watch </a>
+                        <ActionButton secondaryPath={data.path} secondaryLabel='See Video' display='secondary'/>
                     </div>  
                 </div> 
             </div>  

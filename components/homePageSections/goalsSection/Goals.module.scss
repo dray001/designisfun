@@ -44,8 +44,6 @@
   }
 
   @include for-desktop-only {
-    height: 100vh;
-    overflow: hidden;
 
     .goalsSecDataWrapper {
       @include displaySettings(flex, column);
@@ -78,5 +76,9 @@
         }
       }
     }
-  } 
+  }
+  
+  @include for-desktopX-only {
+    height: 100vh;
+  }
 }

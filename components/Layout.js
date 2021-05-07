@@ -1,7 +1,6 @@
 import Nav from './Nav'
 import Footer from './Footer'
 import Meta from './Meta'
-// import Header from './Header'
 
 const Layout = ({ children }) => {
   return (
@@ -9,11 +8,10 @@ const Layout = ({ children }) => {
       <Meta />
       <div className='container'>
         <Nav />
-        <main className='main'>
-          {/* <Header /> */}
-          {children}
-        </main>
-      {/* <Footer /> */}
+          <main className='main'>
+            {children}
+          </main>
+        <Footer />
       </div>
     </>
   )

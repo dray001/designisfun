@@ -27,6 +27,7 @@ p {
 h1 {
   font-size: 46px;
   min-width: 80%;
+  max-width: 100%;
   text-align: center;
   margin: 0;
   margin-bottom: 32px;
@@ -39,10 +40,10 @@ h1 {
     position: absolute;
     z-index: -2;
     opacity: 1;
-    width: 55%;
+    width: 60%;
     height: 50px;
     left: 0%;
-  bottom: -18px;
+    bottom: -18px;
     background: #FEFE6B;
   }
 
@@ -56,6 +57,14 @@ h1 {
     max-width: 80%;
     font-size: 56px;
 
+    &:after {
+      width: 50%;
+      left: -5%;
+      bottom: -20px;
+    }
+  }
+
+  @include for-desktop-only {
     &:after {
       width: 110%;
       left: -5%;
@@ -84,22 +93,27 @@ main > section {
   background: #ffff;
   display: block;
   width: 100%;
-  padding: 52px 32px;
+  padding: 48px 32px;
+
+  @include for-tinnyP-only {
+    padding: 48px 32px;
+  }
 
   @include for-tablet-only {
-    padding: 0 10%;
+    padding: 64px 12%;
   }
 
   @include for-desktop-only {
-    height: 80vh;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    padding: 0 10%;
+    display: block;
+    padding: 124px 8%;
   }
 
   @include for-desktopX-only {
-    padding: 0 16%;
+    height: 80vh;
+    padding: 0 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -107,15 +121,31 @@ nav {
   padding: 32px;
   z-index: 20;
 
+  @include for-tablet-only {
+    padding: 40px 12%;
+  }
+
   @include for-desktop-only {
-    padding: 0 10%;
+    padding: 32px 8%;
   }
 
   @include for-desktopX-only {
-    padding: 32px 16%;
+    padding: 32px 14%;
   }
 }
 
 footer {
-  padding: 48px 16%;
+  padding: 32px;
+
+  @include for-tablet-only {
+    padding: 40px 12%;
+  }
+
+  @include for-desktop-only {
+    padding: 16px 8%;
+  }
+
+  @include for-desktopX-only {
+    padding: 32px 14%;
+  }
 }

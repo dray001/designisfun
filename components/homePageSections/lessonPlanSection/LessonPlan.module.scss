@@ -84,12 +84,10 @@
   }
 
   @include for-desktop-only {
-      height: 100vh;
-      overflow: hidden;
 
     .lessonPlanSecDataWrapper {
-    @include displaySettings(flex, column);
-    align-items: center;
+      @include displaySettings(flex, column);
+      align-items: center;
 
       .stringsDataWrapper {
         @include stringsWrapperDefault(500px);
@@ -111,6 +109,11 @@
         }
       }
     }
+  }
+
+  @include for-desktopX-only {
+    height: 100vh;
+    overflow: hidden;
   }
 
   

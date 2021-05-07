@@ -16,7 +16,7 @@ const Meta = ({ title, keywords, description }) => {
 Meta.defaultProps = {
   title: 'designisfun',
   keywords: 'design, ui, ux, graphicdesign, programming',
-  description: 'Learn design the right way',
+  description: 'Design Fundamentals',
 }
 
 export default Meta
