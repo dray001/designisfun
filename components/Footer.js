@@ -19,7 +19,7 @@ const Footer = () => {
           {
             socialLinks.map((link) => 
               <li>
-                <a href={link.path}>{link.iconFooter}</a>
+                <a target='_blank' href={link.path}>{link.iconFooter}</a>
               </li>
             )
           }

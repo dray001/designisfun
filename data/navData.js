@@ -44,31 +44,36 @@ const instagramFooter = <svg width="19" height="18" viewBox="0 0 19 18" fill="no
                         </svg>
 
 export const NavData = {
+    
     navLogo: logo,
 
     navLinks: [
         {
             id: '1',
             label: 'Videos',
-            path: '/'
+            path: 'https://youtube.com/c/DesignIsFun',
+            target: '_blank'
         },
 
         {
             id: '2',
             label: 'Lesson Plan',
-            path: '/#plan'
+            path: '/#plan',
+            target: ''
         },
 
         {
             id: '4',
             label: 'Objective',
-            path: '/#goals'
+            path: '/#goals',
+            target: ''
         },
 
         {
             id: '3',
             label: 'About Author',
-            path: '/'
+            path: '/#author',
+            target: ''
         }
 
     ],
@@ -80,7 +85,7 @@ export const NavData = {
             label: 'twitter',
             icon: twitterIcon,
             iconFooter: twitterFooter,
-            path: 'https://twitter.com/god_Dray'
+            path: 'https://twitter.com/DesignIsFun_sch'
         },
 
         {
@@ -96,7 +101,7 @@ export const NavData = {
             label: 'instagram',
             icon: instagramIcon,
             iconFooter: instagramFooter,
-            path: '/'
+            path: 'https://www.instagram.com/designisfun_sch'
         }
     ]
 }

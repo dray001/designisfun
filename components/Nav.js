@@ -17,22 +17,18 @@ const Nav = () => {
    },[])
 
    const toggleMenu =()=> {
+     let layoutContainer = document.querySelector('.container');
     setOpenstate(!openState);
-    let cw = document.querySelector('.container');
 
     if(openState === false) {
-      cw.classList.add('modalOn');
+      layoutContainer.classList.add('modalOn');
     }
 
     else {
-     cw.classList.remove('modalOn');
+     layoutContainer.classList.remove('modalOn');
     }
-  }
 
-  const closeMenu =()=> {
-   setOpenstate(false);
   }
-
 
   return (
     <nav className="nav">
@@ -43,7 +39,7 @@ const Nav = () => {
         {
           navLinks.map((link) => 
             <li>
-              <Link href={link.path}><a>{link.label}</a></Link>
+              <Link href={link.path}><a target={link.target}>{link.label}</a></Link>
             </li>
           )
         }
@@ -53,7 +49,8 @@ const Nav = () => {
         {
           socialLinks.map((link) => 
             <li>
-              <a href={link.path}>{link.icon}</a>
+              <Link href={link.path}><a target='_blank'>{link.icon}</a></Link>
+              
             </li>
           )
         }
@@ -69,27 +66,31 @@ const Nav = () => {
 
       {/* mobileNavWrapper */}
 
-      <div onClick={closeMenu} className={openState ? 'hambugerModal' : 'hambugerModal off' }>
+      <div onClick={toggleMenu} className={openState ? 'hambugerModal' : 'hambugerModal off' }>
         <div className={openState ? 'mobileNavWrapper on' : 'mobileNavWrapper' }>
           <ul className="navLinksMobileWrapper">
             {
               navLinks.map((link) => 
                 <li>
-                  <Link href={link.path}><a onClick={toggleMenu} >{link.label}</a></Link>
+                  <Link href={link.path}><a onClick={toggleMenu}> {link.label} </a></Link>
                 </li>
               )
             }
           </ul>
 
-          <ul className="socialLinksMobileWrapper">
-            {
-              socialLinks.map((link) => 
-                <li>
-                  <a href={link.path}>{link.icon}</a>
-                </li>
-              )
-            }
-          </ul>
+          <div className="socialLinksMobileWrapper">
+            <p>Kindly follow and subscribe <br/> for educative design topics</p>
+            <ul >
+              {
+                socialLinks.map((link) => 
+                  <li>
+                    <a target='_blank' href={link.path}>{link.icon}</a>
+                  </li>
+                )
+              }
+            </ul>
+          </div>
+          
         </div>
       </div>
 

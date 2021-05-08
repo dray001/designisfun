@@ -2,7 +2,7 @@ import styles from './AboutAuthor.module.scss'
 
 const AboutAuthorSection =({data})=> {
     return (
-    <section className={styles.aboutAuthorSection}>
+    <section id='author' className={styles.aboutAuthorSection}>
         <div className={styles.aboutAuthorSecDataWrapper}>
 
             <div className={styles.stringsDataWrapper}>
@@ -16,7 +16,7 @@ const AboutAuthorSection =({data})=> {
                 <p>{data.para2}</p>
                 <p>{data.para3}</p>
                 <div className={styles.socialHolder}>
-                    {data.socialIcons.map((icon)=> <a href='/'>{icon}</a>)}
+                    {data.socialIcons.map((icon)=> <a target='_blank' href={icon.link}>{icon.icon}</a>)}
                 </div>
             </div>
 

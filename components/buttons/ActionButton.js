@@ -9,7 +9,7 @@ const ActionButton = ({ display, primaryLabel, primaryPath, secondaryLabel, seco
     if (displayValue==='primary') {
       return  <div className={styles.buttonsWrapper}>
                 <div className={styles.primaryButton}>
-                  <a href={primaryPath}> {primaryLabel ? primaryLabel : "See Lesson Plan"} </a>
+                  <Link href={primaryPath}><a> {primaryLabel ? primaryLabel : "See Lesson Plan"} </a></Link>
                 </div>
               </div>   
     }
@@ -17,7 +17,7 @@ const ActionButton = ({ display, primaryLabel, primaryPath, secondaryLabel, seco
     else if (displayValue==='secondary') {
       return  <div className={styles.buttonsWrapper}>
                 <div className={styles.secondaryButton}>
-                  <a href={secondaryPath}> {secondaryLabel ? secondaryLabel : "See Lesson Plan"} </a>
+                  <Link href={secondaryPath}><a> {secondaryLabel ? secondaryLabel : "See Lesson Plan"} </a></Link>   
                 </div>
               </div>   
       }
@@ -25,12 +25,12 @@ const ActionButton = ({ display, primaryLabel, primaryPath, secondaryLabel, seco
     else {
       return <div className={styles.buttonsWrapper}>
                 <div className={styles.primaryButton}>
-                    {/* <Link href='/'> <a> fdfdfdf </a> </Link> */}
-                    <a href={primaryPath}> {primaryLabel ? primaryLabel : "See Lesson Plan"} </a>
+                    <Link href={primaryPath}><a> {primaryLabel ? primaryLabel : "See Lesson Plan"} </a></Link>
                 </div>
 
                 <div  className={styles.secondaryButton}>
-                  <a href={secondaryPath}> {secondaryLabel ? secondaryLabel : "See Lesson Plan"} </a>
+                  <Link href={secondaryPath}><a> {secondaryLabel ? secondaryLabel : "See Lesson Plan"} </a></Link>
+                  
                 </div>
               </div>
     }
