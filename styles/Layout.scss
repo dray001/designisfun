@@ -7,7 +7,19 @@
     height: 100vh;
     overflow-y: hidden;
     position: relative;
-  } 
+  }
+
+  .navHolder {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 20;
+
+    &.hide {
+      top: -100px;
+    }
+  }
 
   main.main {
     width: 100%;

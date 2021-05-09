@@ -82,18 +82,18 @@ export const NavData = {
     socialLinks: [
         {
             id: '1',
-            label: 'twitter',
-            icon: twitterIcon,
-            iconFooter: twitterFooter,
-            path: 'https://twitter.com/DesignIsFun_sch'
-        },
-
-        {
-            id: '2',
             label: 'youtube',
             icon: youtubeIcon,
             iconFooter: youtubeFooter,
             path: 'https://youtube.com/c/DesignIsFun'
+        },
+
+        {
+            id: '2',
+            label: 'twitter',
+            icon: twitterIcon,
+            iconFooter: twitterFooter,
+            path: 'https://twitter.com/DesignIsFun_sch'
         },
 
         {
