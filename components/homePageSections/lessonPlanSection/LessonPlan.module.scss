@@ -84,6 +84,8 @@
   }
 
   @include for-desktop-only {
+    display: block;
+    padding: 124px 8%;
 
     .lessonPlanSecDataWrapper {
       @include displaySettings(flex, column);
@@ -112,9 +114,6 @@
   }
 
   @include for-desktopX-only {
-    height: 100vh;
-    overflow: hidden;
+    padding: 156px 8%;
   }
-
-  
 }
