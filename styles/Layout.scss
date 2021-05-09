@@ -13,11 +13,11 @@
     position: sticky;
     width: 100%;
     top: 0;
-    transition: top 0.3s;
+    transition: top 0.4s ease-out;
     z-index: 20;
 
     &.hide {
-      top: -100px;
+      top: -80px;
     }
   }
 
