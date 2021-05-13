@@ -33,14 +33,14 @@
       position: relative;
       background: #000000;
       color: white;  
-          &:after {
-              content: url('../buttons/icon/flash.svg');
-              position: absolute;
-              top: -10px;
-              animation: flashes 6s infinite ease-out;
-              transform-origin: 50% 50%;
-              transform: rotate(0deg) translateX(-200px);
-          }
+          // &:after {
+          //     content: url('../buttons/icon/flash.svg');
+          //     position: absolute;
+          //     top: -10px;
+          //     animation: flashes 6s infinite ease-out;
+          //     transform-origin: 50% 50%;
+          //     transform: rotate(0deg) translateX(-200px);
+          // }
       }
   }
 
@@ -52,6 +52,22 @@
           position: relative;
           border: 1px solid;
       }
+  }
+
+  @include for-tinnyP-only {
+    display: block;
+    width: inherit;
+    .secondaryButton, .primaryButton {
+        width: 100%;
+      a {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .primaryButton {
+      margin-bottom: 16px;
+    }
   }
 
   @include for-desktop-only {

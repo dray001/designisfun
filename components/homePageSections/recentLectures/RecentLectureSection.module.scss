@@ -49,6 +49,17 @@
       }
     }
 
+    @include for-tinnyP-only {
+
+      .recentLecDataWrapper {
+
+          .bw {
+            display: block;
+            width: 80%;
+          }
+      }
+    }
+
     @include for-desktop-only {
         padding-top: 50px;
         padding-bottom: 50px;

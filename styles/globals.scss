@@ -96,7 +96,7 @@ main > section {
   padding: 48px 32px;
 
   @include for-tinnyP-only {
-    padding: 48px 32px;
+    padding: 48px 24px;
   }
 
   @include for-tablet-only {

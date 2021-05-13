@@ -9,7 +9,7 @@ const LandingSection =({data})=> {
                 <div className={styles.stringsDataWrapper}>
                     <h1>Design Fundamentals <br/> for all </h1>
                     <p>{data.description}</p>
-                    <ActionButton display='primary' primaryPath='/#plan' />
+                    <ActionButton secondaryTarget={true} secondaryLabel='Attend Class' secondaryPath={data.attendClass} primaryPath='/#plan' />
                 </div>
 
                 <div className={styles.imageDataWrapper}>

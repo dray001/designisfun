@@ -124,6 +124,7 @@ export const homePageData = {
             section: 'landing',
             title: 'Design Fundamentals for all',
             image: illustration,
+            attendClass: classLink,
             description: `Designisfun is a virtual e-learning platform, that teaches design and how to integrate its principles to 
             other fields of life or professions such as Product Design, Programming, Graphic Design, etc.`
         },

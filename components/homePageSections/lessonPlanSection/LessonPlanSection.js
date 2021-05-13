@@ -30,7 +30,7 @@ const LessonPlanSection =({data})=> {
             <div className={styles.feeCost}>
                 <span>Any Fee?</span>
                 <p>{data.description}</p> 
-                <ActionButton display='primary' primaryPath={data.classLink} primaryLabel='Attend Class' />   
+                <ActionButton display='primary' primaryTarget={true} primaryPath={data.classLink} primaryLabel='Attend Class' />   
             </div>    
         </div>
     </section>
