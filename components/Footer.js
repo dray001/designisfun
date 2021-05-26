@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className={navStyles.footer}>
       <div className={navStyles.copyRightInfo}>
-        <p> DesignIsFun ©200021. Inspired by the Universe </p>
+        <p> DesignIsFun ©2021. Inspired by the Universe </p>
       </div>
 
       <div className={navStyles.socialLinksWrapper}>
