@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className={navStyles.footer}>
       <div className={navStyles.copyRightInfo}>
-        <p> DesignIsFun ©2021. Inspired by the Universe </p>
+        <p> DesignIsFun ©200021. Inspired by the Universe </p>
       </div>
 
       <div className={navStyles.socialLinksWrapper}>
@@ -19,6 +19,7 @@ const Footer = () => {
           {
             socialLinks.map((link) => 
               <li>
+                <div></div>
                 <a target='_blank' href={link.path}>{link.iconFooter}</a>
               </li>
             )
