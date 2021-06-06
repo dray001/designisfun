@@ -81,7 +81,13 @@
           .descriptionWrapper {
             display: flex;
             justify-content: space-between;
-            width: 100%; 
+            width: 100%;
+
+            & div:first-child{
+              width: 70%;
+            }
+
+        
             
             h2 {
               width: auto;
@@ -89,7 +95,6 @@
             }
 
             p {
-              width: auto;
               margin-bottom: 0;
             }
           }

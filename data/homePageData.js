@@ -131,10 +131,10 @@ export const homePageData = {
         {
             id: '2',
             section: 'recent Video',
-            title: 'Emoji Design Using Figma',
+            title: 'Introduction to Graphic Design',
             icon: youtubeIcon,
-            path: 'https://youtu.be/GR46YfsZ6cE',
-            description: `Introduction to Figma's Interface followed by a quick tutorial on designing emojis 🙃`
+            path: 'https://youtu.be/4oBMripD7AE',
+            description: `Understanding the principles of graphic designer will help you effectively convey ideas to your users or target audience.`
         },
         {
             id: '3',

@@ -16,9 +16,8 @@ const RecentLectureSection =({data})=> {
                         <p>{data.description}</p>
                     </div>
 
-                    <div className={styles.bw}>
-                        <ActionButton secondaryTarget={true} secondaryPath={data.path} secondaryLabel='See Video' display='secondary'/>
-                    </div>  
+                    
+                    <ActionButton secondaryTarget={true} secondaryPath={data.path} secondaryLabel='See Video' display='secondary'/>
                 </div> 
             </div>  
         </div>

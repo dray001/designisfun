@@ -6,19 +6,17 @@ const ActionButton = ({display, primaryLabel, primaryPath, secondaryLabel, secon
   let displayChecker =(displayValue)=> {
     
     if (displayValue==='primary') {
-      return  <div className={styles.buttonsWrapper}>
-                <div className={styles.primaryButton}>
+      return  <div className={styles.primaryButtonOnly}>
                   <Link href={primaryPath}><a target={primaryTarget ? '_blank' : ''}> {primaryLabel ? primaryLabel : "See Lesson Plan"} </a></Link>
-                </div>
-              </div>   
+              </div>
+              
     }
 
     else if (displayValue==='secondary') {
-      return  <div className={styles.buttonsWrapper}>
-                <div className={styles.secondaryButton}>
+      return  <div className={styles.secondaryButtonOnly}>
                   <Link href={secondaryPath}><a target={secondaryTarget ? '_blank' : ''}> {secondaryLabel ? secondaryLabel : "See Lesson Plan"} </a></Link>   
-                </div>
-              </div>   
+              </div>
+                 
       }
 
     else {

@@ -16,6 +16,31 @@
   }
 }
 
+.primaryButtonOnly {
+  margin-top: 24px;
+  width: auto;
+    a {
+    padding: 16px 24px;
+    display: inline-block;
+    border-radius: 48px;
+    position: relative;
+    background: #000000;
+    color: white;
+    }
+}
+
+.secondaryButtonOnly {
+  margin-top: 24px;
+  width: auto;
+  a {
+      padding: 16px 24px;
+      display: inline-block;
+      border-radius: 48px;
+      position: relative;
+      border: 1px solid;
+  }
+}
+
 
 .buttonsWrapper {
   display: flex;
