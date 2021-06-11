@@ -131,10 +131,10 @@ export const homePageData = {
         {
             id: '2',
             section: 'recent Video',
-            title: 'Introduction to Graphic Design',
+            title: 'Introduction to Photopea',
             icon: youtubeIcon,
-            path: 'https://youtu.be/4oBMripD7AE',
-            description: `Understanding the principles of graphic designer will help you effectively convey ideas to your users or target audience.`
+            path: 'https://youtu.be/8xTjJ6h0PGc',
+            description: `Photopea is an alternative to photoshop which is web-based, meaning you can do photo manipulation on the web, hope you learn one or two from this tutorial, happy learning... 📚✏️`
         },
         {
             id: '3',
