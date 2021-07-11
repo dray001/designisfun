@@ -10,7 +10,7 @@ const LearnDesignSection =({data})=> {
             <div className={styles.stringsDataWrapper}>
                 <h1>Why Learn <br /> Design </h1>
                 <p>{data.description}</p>
-                <ActionButton display='secondary' secondaryPath='/#plan' />
+                {/* <ActionButton display='secondary' secondaryPath='/#plan' /> */}
             </div>
 
             <div className={styles.imageDataWrapper}>

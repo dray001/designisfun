@@ -55,15 +55,15 @@ export const NavData = {
             target: '_blank'
         },
 
-        {
-            id: '2',
-            label: 'Lesson Plan',
-            path: '/#plan',
-            target: ''
-        },
+        // {
+        //     id: '2',
+        //     label: 'Lesson Plan',
+        //     path: '/#plan',
+        //     target: ''
+        // },
 
         {
-            id: '4',
+            id: '2',
             label: 'Objective',
             path: '/#goals',
             target: ''

@@ -112,8 +112,10 @@ const twitter = 'https://twitter.com/god_Dray';
 
 const linkedIn = 'https://www.linkedin.com/in/goddray/';
 
+const youtube = 'https://youtube.com/c/DesignIsFun';
+
 // Link to join class
-const classLink = 'https://classroom.google.com/c/MzI5NTEzNDA2NjIx?cjc=erjv4bl'
+const classLink = 'https://classroom.google.com/c/MzI5NTEzNDA2NjIx?cjc=erjv4bl';
 
 
 
@@ -125,6 +127,7 @@ export const homePageData = {
             title: 'Design Fundamentals for all',
             image: illustration,
             attendClass: classLink,
+            youtubeChannel: youtube,
             description: `Designisfun is a virtual e-learning platform, that teaches design and how to integrate its principles to 
             other fields of life or professions such as Product Design, Programming, Graphic Design, etc.`
         },
