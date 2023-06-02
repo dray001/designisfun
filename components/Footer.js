@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import navStyles from '../styles/Footer.module.scss'
 import {NavData} from '../data/navData.js'
 
@@ -20,7 +21,7 @@ const Footer = () => {
             socialLinks.map((link) => 
               <li>
                 <div></div>
-                <a target='_blank' href={link.path}>{link.iconFooter}</a>
+                <Link target='_blank' href={link.path}> {link.iconFooter} </Link>
               </li>
             )
           }

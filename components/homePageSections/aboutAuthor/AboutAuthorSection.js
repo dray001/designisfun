@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './AboutAuthor.module.scss'
 
 const AboutAuthorSection =({data})=> {
@@ -16,7 +17,7 @@ const AboutAuthorSection =({data})=> {
                 <p>{data.para2}</p>
                 <p>{data.para3}</p>
                 <div className={styles.socialHolder}>
-                    {data.socialIcons.map((icon)=> <a target='_blank' href={icon.link}>{icon.icon}</a>)}
+                    {data.socialIcons.map((icon)=> <Link target='_blank' href={icon.link}>{icon.icon}</Link> )}
                 </div>
             </div>
 

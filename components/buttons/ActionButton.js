@@ -7,14 +7,14 @@ const ActionButton = ({display, primaryLabel, primaryPath, secondaryLabel, secon
     
     if (displayValue==='primary') {
       return  <div className={styles.primaryButtonOnly}>
-                  <Link href={primaryPath}><a target={primaryTarget ? '_blank' : ''}> {primaryLabel ? primaryLabel : "See Lesson Plan"} </a></Link>
+                  <Link target={primaryTarget ? '_blank' : ''} href={primaryPath}> {primaryLabel ? primaryLabel : "See Lesson Plan"} </Link>
               </div>
               
     }
 
     else if (displayValue==='secondary') {
       return  <div className={styles.secondaryButtonOnly}>
-                  <Link href={secondaryPath}><a target={secondaryTarget ? '_blank' : ''}> {secondaryLabel ? secondaryLabel : "See Lesson Plan"} </a></Link>   
+                  <Link target={secondaryTarget ? '_blank' : ''} href={secondaryPath}> {secondaryLabel ? secondaryLabel : "See Lesson Plan"} </Link>   
               </div>
                  
       }
@@ -22,11 +22,11 @@ const ActionButton = ({display, primaryLabel, primaryPath, secondaryLabel, secon
     else {
       return <div className={styles.buttonsWrapper}>
                 <div className={styles.primaryButton}>
-                    <Link href={primaryPath}><a target={primaryTarget ? '_blank' : ''}> {primaryLabel ? primaryLabel : "See Lesson Plan"} </a></Link>
+                    <Link target={primaryTarget ? '_blank' : ''} href={primaryPath}> {primaryLabel ? primaryLabel : "See Lesson Plan"} </Link>
                 </div>
 
                 <div className={styles.secondaryButton}>
-                    <Link href={secondaryPath}><a target={secondaryTarget ? '_blank' : ''}> {secondaryLabel ? secondaryLabel : "See Lesson Plan"} </a></Link>
+                    <Link target={secondaryTarget ? '_blank' : ''} href={secondaryPath}> {secondaryLabel ? secondaryLabel : "See Lesson Plan"} </Link>
                 </div>
               </div>
     }

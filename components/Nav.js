@@ -33,13 +33,13 @@ const Nav = () => {
   return (
     <nav className="nav">
       <div className="logo">
-        <Link href='/'><a>{logo}</a></Link>
+        <Link href='/'>{logo}</Link>
       </div>
       <ul className="navLinksDeskWrapper">
         {
           navLinks.map((link) => 
             <li>
-              <Link href={link.path}><a target={link.target}>{link.label}</a></Link>
+              <Link href={link.path}>{link.label}</Link>
             </li>
           )
         }
@@ -49,7 +49,7 @@ const Nav = () => {
         {
           socialLinks.map((link) => 
             <li>
-              <Link href={link.path}><a target='_blank'>{link.icon}</a></Link>
+              <Link target='_blank' href={link.path}>{link.icon}</Link>
               
             </li>
           )
@@ -72,7 +72,7 @@ const Nav = () => {
             {
               navLinks.map((link) => 
                 <li>
-                  <Link href={link.path}><a onClick={toggleMenu}> {link.label} </a></Link>
+                  <Link onClick={toggleMenu} href={link.path}> {link.label} </Link>
                 </li>
               )
             }
@@ -84,7 +84,7 @@ const Nav = () => {
               {
                 socialLinks.map((link) => 
                   <li>
-                    <a target='_blank' href={link.path}>{link.icon}</a>
+                    <Link target='_blank' href={link.path}> {link.icon} </Link>
                   </li>
                 )
               }

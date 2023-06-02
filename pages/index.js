@@ -11,7 +11,7 @@ let landingPageData = homePageData.data[0];
 let recentLecPageData = homePageData.data[1];
 let learnDesignPageData = homePageData.data[2];
 let goalsPageData = homePageData.data[3];
-// let lessonPlanPageData = homePageData.data[4];
+let lessonPlanPageData = homePageData.data[4];
 let aboutAuthorPageData = homePageData.data[5];
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
         <RecentLectureSection data={recentLecPageData} />
         <LearnDesignSection data={learnDesignPageData} />
         <GoalsSection data={goalsPageData} />
-        {/* <LessonPlanSection data={lessonPlanPageData} /> */}
+        <LessonPlanSection data={lessonPlanPageData} />
         <AboutAuthorSection data={aboutAuthorPageData} />
     </Layout>
   )

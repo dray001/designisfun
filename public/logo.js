@@ -16,7 +16,7 @@ const logo = <svg width="138" height="19" viewBox="0 0 138 19" fill="none" xmlns
 </svg>
 
 function Logo() {
-  return ( <Link href='/'> <a>ssss</a> </Link> )
+  return ( <Link href='/'> ssss </Link> )
 }
 
 export default Logo
