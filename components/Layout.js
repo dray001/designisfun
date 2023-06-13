@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from "react"
+import React, {useEffect, useState, useContext} from "react"
+import { ThemeContext } from './ThemeContext'
 import Nav from './Nav'
 import Footer from './Footer'
 import Meta from './Meta'
@@ -7,6 +8,7 @@ const Layout = ({ children }) => {
 
   const [prevScrollPos, setPrevScrollPos] = useState(0); 
   const [visible, setVisible] = useState(true);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const handleScroll = () => {
     // find current scroll position
@@ -29,10 +31,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <Meta />
-      <div className='container'>
+      <div className={`container ${theme}`}>
         <div className = {visible ? 'navHolder' : 'navHolder hide'}><Nav /></div>
         
           <main className='main'>
+            <button onClick={toggleTheme}>
+              {theme === '' ? 'Dark Mode' : 'Light Mode'}
+            </button>
             {children}
           </main>
         <Footer />

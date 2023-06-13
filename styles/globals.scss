@@ -1,9 +1,23 @@
 @import '/styles/commonStyle.scss';
+// @import '/styles/displayMode.scss';
+:root {
+  --primary-color: #ff0000;
+  --background-color: #FFFFF5;
+  /* ... other variables for light mode */
+}
+
+.dark-mode {
+  --primary-color: #001f6d;
+  --background-color: #000000;
+  /* ... other variables for dark mode */
+}
+
 
 html,
 body {
   padding: 0;
   margin: 0;
+  background: #3c3c3c;
   scroll-behavior: smooth;
   position: relative;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -21,7 +35,7 @@ p {
   font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
-  color: #424242;
+  color: var(--primary-color);
   /* width: 100%; */
 }
 
