@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className={navStyles.footer}>
       <div className={navStyles.copyRightInfo}>
-        <p> DesignIsFun ©{new Date().getFullYear()}. Inspired by the Universe </p>
+        <p> DesignIsFun ©{new Date().getFullYear()}. Inspired by Élédùmárè </p>
       </div>
 
       <div className={navStyles.socialLinksWrapper}>
