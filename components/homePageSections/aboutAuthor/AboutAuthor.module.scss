@@ -2,7 +2,7 @@
 
 .aboutAuthorSection {
   height: unset;
-  background-color: #FFFFF5;
+  background-color: var(--white);
 
   .aboutAuthorSecDataWrapper {
     display: flex;
@@ -45,7 +45,7 @@
       width: 100%;
       border-radius: 16px;
       overflow: hidden;
-      background: #FBF9E5;
+      background: var(--gray_less);
       margin-bottom: 48px;
 
       img {
@@ -95,7 +95,7 @@
         width: 60vh;
         border-radius: 16px;
         overflow: hidden;
-        background: #FBF9E5;
+        background: var(--gray_less);
         img {
           width: 100%;
           transform: scale(1.2) translateY(60px);

@@ -2,7 +2,7 @@
 
 .goalsSection {
   height: unset;
-  background: #F8F8F8;
+  background: var(--yellow_less);
 
   .goalsSecDataWrapper {
     display: block;
@@ -27,7 +27,7 @@
         width: 100%;
         align-items: left;
         text-align: left;
-        background: #FFFFFF;
+        background: var(--white);
         box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.12);
         border-radius: 8px;
 
@@ -73,6 +73,13 @@
           text-align: center;
           padding: 40px;
           width: 30%;
+
+          svg {
+            path {
+              stroke: var(--black);
+            }
+            ellipse { fill: var(--yellow);  }
+          }
         }
       }
     }

@@ -32,12 +32,9 @@ const Layout = ({ children }) => {
     <>
       <Meta />
       <div className={`container ${theme}`}>
-        <div className = {visible ? 'navHolder' : 'navHolder hide'}><Nav /></div>
+        <div className = {visible ? 'navHolder' : 'navHolder hide'}> <Nav theme_val={theme} toggleTheme_val={toggleTheme} /> </div>
         
           <main className='main'>
-            <button onClick={toggleTheme}>
-              {theme === '' ? 'Dark Mode' : 'Light Mode'}
-            </button>
             {children}
           </main>
         <Footer />

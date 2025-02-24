@@ -1,14 +1,14 @@
 @import '/styles/commonStyle.scss';
 
 .recentLecSection {
-    background-color: #EFEFE7;
+    background-color: var(--yellow_less);
     height: unset;
     padding-top: 32px;
     padding-bottom: 32px;
 
     .recentLecDataWrapper {
       display: block;
-      background: #ffff;
+      background: var(--white);
       padding: 24px;
       border-radius: 16px;
       position: relative;

@@ -1,15 +1,66 @@
 @import '/styles/commonStyle.scss';
 // @import '/styles/displayMode.scss';
 :root {
-  --primary-color: #ff0000;
-  --background-color: #FFFFF5;
-  /* ... other variables for light mode */
+
+  // Brand_Colors_Spectrum
+
+  --yellow_est: #414115;
+  --yellow_er: #66661F;
+  --yellow: #E7FF57;
+  --yellow_less: #EFEFE7;
+  --yellow_lesser: #FFFFF5;
+
+// Monochrome_Colors_Spectrum
+
+  --white: #ffffff;
+  --gray_less: #BABABA;
+  --gray: #262626;
+  --gray_er: #3c3c3c;
+  --black: #000000;
+
+// HeaderNav_Color_Switch
+--headerNav_black: #000000;
+
+// ButtonMaterial_Color_Switch
+--pri_btn_bg: #000000;
+--pri_btn_text: #ffffff;
+
+--sec_btn_bg: unset;
+--sec_btn_text: #000000;
+
+/* ... other variables for light mode */
+
 }
 
 .dark-mode {
-  --primary-color: #001f6d;
-  --background-color: #000000;
-  /* ... other variables for dark mode */
+
+  // Brand_Colors_Spectrum
+
+  --yellow_est: #414115;
+  --yellow_er: #66661F;
+  --yellow: #414115;
+  --yellow_less: #3c3c3c;
+  --yellow_lesser: #000000;
+
+// Monochrome_Colors_Spectrum
+
+  --white: #000000;
+  --gray_less: #3c3c3c;
+  --gray: #262626;
+  --gray_er: #BABABA;
+  --black: #FFFFFF;
+
+// HeaderNav_Color_Switch
+  --headerNav_black: #3c3c3c;
+
+// ButtonMaterial_Color_Switch
+  --pri_btn_bg: #E7FF57;
+  --pri_btn_text: #000000;
+
+  --sec_btn_bg: unset;
+--sec_btn_text: #E7FF57;
+
+/* ... other variables for light mode */
 }
 
 
@@ -35,7 +86,7 @@ p {
   font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
-  color: var(--primary-color);
+  color: var(--black);
   /* width: 100%; */
 }
 
@@ -48,18 +99,19 @@ h1 {
   margin-bottom: 32px;
   z-index: 1;
   position: relative;
+  color: var(--black);
 
   &:after {
     content: '';
     display: block;
     position: absolute;
-    z-index: -2;
+    z-index: -20;
     opacity: 1;
     width: 60%;
     height: 50px;
     left: 0%;
     bottom: -18px;
-    background: #FEFE6B;
+    background: var(--yellow);
   }
 
   @include for-tinnyP-only {
@@ -91,6 +143,7 @@ h1 {
 h2, h3, h4, h6, p {
   padding: 0;
   margin: 0;
+  color: var(--black);
 }
 
 * {
@@ -105,7 +158,8 @@ main {
 /* styles for direct children of the main tags (sections) ⇣ */
 
 main > section {
-  background: #ffff;
+  background: var(--white);
+  // background: blue;
   display: block;
   width: 100%;
   padding: 48px 32px;

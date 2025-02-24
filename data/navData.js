@@ -55,13 +55,6 @@ export const NavData = {
             target: '_blank'
         },
 
-        // {
-        //     id: '2',
-        //     label: 'Lesson Plan',
-        //     path: '/#plan',
-        //     target: ''
-        // },
-
         {
             id: '2',
             label: 'Objective',
@@ -73,6 +66,13 @@ export const NavData = {
             id: '3',
             label: 'About Author',
             path: '/#author',
+            target: ''
+        },
+
+        {
+            id: '4',
+            label: 'Publications',
+            path: 'publications/publication',
             target: ''
         }
 

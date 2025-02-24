@@ -14,15 +14,20 @@
 
 .nav {
     height: 50px;
-    background: #000;
+    background: var(--headerNav_black);
     color: #fff;
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     .navLinksDeskWrapper,  .socialLinksDeskWrapper {
       display: none;
+
+      button {
+        background-color: unset;
+      }
     }
 
     .hambugerModal {
@@ -193,6 +198,11 @@
           } 
         }
       }
+    }
+
+    button {
+      position: absolute;
+      right: 60px;
     }
 
     @include for-tablet-only {
