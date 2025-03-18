@@ -1,0 +1,96 @@
+@import '/styles/commonStyle.scss';
+
+.docThumbnailGroup {
+    display: block;
+    background-color: var(--docThumbnailGroup);
+    min-width: auto;
+    text-decoration: none;
+    color: unset;
+    padding: 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 6px 10px 8px rgba(60, 60, 60, 0.04);
+    transition: all .2s;
+
+    &:hover {
+        box-shadow: unset;
+        transform: translate(6px,6px);
+
+        .contentWrapper {
+           a {
+                background: #D0D2FF;
+                color: #0A0A0A;
+            } 
+        }  
+    }
+
+    .contentWrapper {
+
+        .img_titleWrapper {
+            display: block;
+            position: relative;
+
+            span {
+                position: absolute;
+                right: 16px;
+                bottom: 16px;
+                padding: 10px;
+                line-height: 18px;
+                border-radius: 12px;
+                background: #1F1F1F;
+                color: #E2E2E2;
+            }
+
+            img {
+                border-radius: 8px;
+                margin: 0;
+            }
+        }
+
+        h6 {
+            font-size: 24px;
+            margin: 32px 0 16px;
+        }
+
+        span {
+            font-size: 16px;
+        }
+
+        a {
+            padding: 8px 16px;
+            background: var(--linkBgColor);
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--linkTextColor);
+            transition: all .2s;
+        }
+
+        p {
+            width: 100%;
+            margin-top: 16px;
+            font-size: 16px;
+        }
+    }
+
+    @include for-desktop-only() {
+
+        .docThumbnailGroup {
+            min-width: 280px;
+    
+            .contentWrapper {   
+                .img_titleWrapper {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        margin: 0px 16px 0px 0px;
+                    }
+                }
+    
+                h6 {
+                    font-size: 24px;
+                    // margin: 0;
+                }
+            }
+        }
+    }
+}
