@@ -124,7 +124,7 @@ export const homePageData = {
         {
             id: '1',
             section: 'landing',
-            title: 'Design Fundamentals for all',
+            title: 'Deesign Fundamentals for all Dem people',
             image: illustration,
             attendClass: classLink,
             youtubeChannel: youtube,
