@@ -18,5 +18,8 @@
     "rss-parser": "^3.13.0",
     "sass": "^1.32.11",
     "typography": "^0.16.19"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
