@@ -1,8 +1,8 @@
 @import '/styles/commonStyle.scss';
 
 .footer {
-    background: rgb(240, 243, 225);
-    color: rgb(65, 65, 65);
+    background: var(--footer_bg);
+    color: var(--black);
     width: 100%;
 
     .copyRightInfo {

@@ -3,20 +3,20 @@ import {NavData} from '../data/navData.js'
 import React, {useState, useEffect} from "react"
 
 // sun
-let sun = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.077 7.92037L7.93054 7.06683L3.68794 2.82423L2.8344 3.67777L7.077 7.92037Z" fill="#E4E4E4"/>
-<path d="M12.6036 0H11.3965V6H12.6036V0Z" fill="#E4E4E4"/>
-<path d="M23.9645 11.3964H17.9645V12.6035H23.9645V11.3964Z" fill="#E4E4E4"/>
-<path d="M16.0979 7.12687L16.9514 7.98041L21.194 3.73781L20.3405 2.88427L16.0979 7.12687Z" fill="#E4E4E4"/>
-<path d="M6 11.3964H0V12.6035H6V11.3964Z" fill="#E4E4E4"/>
-<path d="M12.6036 18H11.3965V24H12.6036V18Z" fill="#E4E4E4"/>
-<path d="M7.89895 16.9002L7.04541 16.0466L2.80281 20.2892L3.65635 21.1428L7.89895 16.9002Z" fill="#E4E4E4"/>
-<path d="M16.9389 16.058L16.0853 16.9116L20.3279 21.1542L21.1815 20.3006L16.9389 16.058Z" fill="#E4E4E4"/>
-<path d="M11.9644 16.5088C14.4546 16.5088 16.4733 14.4901 16.4733 12C16.4733 9.50978 14.4546 7.49109 11.9644 7.49109C9.47426 7.49109 7.45557 9.50978 7.45557 12C7.45557 14.4901 9.47426 16.5088 11.9644 16.5088Z" fill="#E4E4E4"/>
+let sun = <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="15" cy="15" r="4" fill="white" stroke="white" stroke-width="2"/>
+<path d="M15 8L15 5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M20.3027 9.69727L22.0705 7.9295" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M22 15L25 15" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M20.3018 20.3037L22.0695 22.0715" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M15 24L15 22" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M7.92871 22.0713L9.69648 20.3035" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M5 15L8 15" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M7.92773 7.93066L9.6955 9.69843" stroke="white" stroke-width="2" stroke-linecap="round"/>
 </svg>
 
-let moon = <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M21.0798 19.9848C18.8897 22.4487 15.6958 24 12.0456 24C5.38403 24 0 18.5247 0 11.8631C0 5.93156 4.10646 1.09506 9.673 0C7.75665 2.09886 6.57034 4.92776 6.57034 8.03042C6.57034 14.7833 11.9544 20.1673 18.7072 20.1673C19.5285 20.1673 20.2586 20.076 21.0798 19.9848Z" fill="black"/>
+let moon = <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.6617 24.9647C21.4426 24.9766 21.222 24.9826 21 24.9826C14.3726 24.9826 9 19.61 9 12.9826C9 8.8199 11.1196 5.15224 14.3383 3C8.01866 3.34343 3 8.57666 3 14.9821C3 21.6095 8.37258 26.9821 15 26.9821C17.4647 26.9821 19.7559 26.239 21.6617 24.9647Z" fill="white"/>
 </svg>
 
 // header assets
@@ -62,15 +62,18 @@ const Nav = ({theme_val, toggleTheme_val}) => {
         }
       </ul>
 
-      <ul className="socialLinksDeskWrapper">
-        {
-          socialLinks.map((link) => 
+      <div className="socialLinksDeskWrapper">
+        <ul className="socialLister">
+          {
+            socialLinks.map((link) => 
             <li>
-              <Link target='_blank' href={link.path}>{link.icon}</Link>     
-            </li>
-          )
-        }
-      </ul>
+                <Link target='_blank' href={link.path}>{link.icon}</Link>     
+              </li>
+            )
+          }
+        </ul>
+          <button onClick={toggleTheme_val}> {theme_val === '' ? sun : moon } </button>
+      </div>
 
       <div onClick={toggleMenu} className= 'hambugerHolder'>
         <div className={openState ? 'hambuger open' : 'hambuger' }>
@@ -80,11 +83,10 @@ const Nav = ({theme_val, toggleTheme_val}) => {
         </div>
       </div>
 
-      <button onClick={toggleTheme_val}> {theme_val === '' ? sun : moon } </button>
-
       {/* mobileNavWrapper */}
 
       <div onClick={toggleMenu} className={openState ? 'hambugerModal' : 'hambugerModal off' }>
+        <button onClick={toggleTheme_val}> {theme_val === '' ? sun : moon } </button>
         <div className={openState ? 'mobileNavWrapper on' : 'mobileNavWrapper' }>
           <ul className="navLinksMobileWrapper">
             {

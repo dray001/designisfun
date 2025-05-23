@@ -24,10 +24,6 @@
 
     .navLinksDeskWrapper,  .socialLinksDeskWrapper {
       display: none;
-
-      button {
-        background-color: unset;
-      }
     }
 
     .hambugerModal {
@@ -40,6 +36,12 @@
       z-index: 2;
       height: 100vh;
       overflow-y: hidden;
+
+      button {
+        position: absolute;
+        right: 8%;
+        bottom: 56px;
+      }
 
       .mobileNavWrapper {
         position: absolute;
@@ -201,8 +203,22 @@
     }
 
     button {
-      position: absolute;
-      right: 60px;
+      padding-right: 32px;
+      border: 2px solid white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      width: 40px;
+      height: 40px;
+      all: unset;
+      transform: rotate(0deg);
+      transition: transform 0.3s ease-out;
+
+          &:active {
+            transform: rotate(180deg);
+          }
     }
 
     @include for-tablet-only {
@@ -224,10 +240,23 @@
         margin: 0;
         color: #fff;
         padding: 0;
-  
+
         li a {
           margin: 5px 15px;
         }
+
+          .socialLister {
+            position: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin-right: 16px;
+            padding-right: 16px;
+            color: #fff;
+            border-right: 0.5px solid white;
+          }
+
       }
 
       .hambugerModal {

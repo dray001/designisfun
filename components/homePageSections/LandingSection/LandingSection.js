@@ -7,7 +7,7 @@ const LandingSection =({data})=> {
         <section className={styles.landingSection}>
             <div className={styles.landingSecDataWrapper}>
                 <div className={styles.stringsDataWrapper}>
-                    <h1>Design Fundamentals <br/> for all❤️ </h1>
+                    <h1>Design Fundamentals <br/> for all </h1>
                     <p>{data.description}</p>
                     <ActionButton 
                     primaryTarget={true} primaryLabel='See Youtube Contents' primaryPath={data.youtubeChannel} 

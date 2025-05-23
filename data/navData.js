@@ -67,14 +67,13 @@ export const NavData = {
             label: 'About Author',
             path: '/#author',
             target: ''
-        },
-
-        {
-            id: '4',
-            label: 'Publications',
-            path: 'publications/publication',
-            target: ''
         }
+        // {
+        //     id: '4',
+        //     label: 'Publications',
+        //     path: 'publications/publication',
+        //     target: ''
+        // }
 
     ],
 

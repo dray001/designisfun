@@ -8,7 +8,7 @@ const LearnDesignSection =({data})=> {
         <div className={styles.learnDesignSecDataWrapper}>
 
             <div className={styles.stringsDataWrapper}>
-                <h1>Why Learn <br /> Design </h1>
+                <h1>Why Learn Design </h1>
                 <p>{data.description}</p>
                 {/* <ActionButton display='secondary' secondaryPath='/#plan' /> */}
             </div>

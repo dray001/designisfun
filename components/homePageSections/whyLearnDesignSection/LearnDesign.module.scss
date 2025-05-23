@@ -61,7 +61,7 @@
 
 
   @include for-desktop-only {
-    height: 90vh;
+    height: 70vh;
     // padding: 0 18%;
     overflow: hidden;
     display: flex;
@@ -70,21 +70,25 @@
     .learnDesignSecDataWrapper {
       @include displaySettings(flex, row-reverse);
       align-items: center;
-      width: 90%;
+      width: 50%;
 
       .stringsDataWrapper {
-        @include stringsWrapperDefault(450px);
         z-index: 1;
+        margin-left: 48px;
 
         h1 {
           text-align: left;
+        }
+
+        p {
+          @include stringsWrapperDefault(450px);
         }
       }
 
       .imageDataWrapper {
         padding: 32px;
         height: 48vh;
-        width: 40%;
+        width: 60%;
 
         img {
           width: 100%;
