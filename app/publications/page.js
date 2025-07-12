@@ -1,11 +1,9 @@
-import Layout from '../../components/Layout'
 import DocThumbnail from '../../components/thumbNails/docThumbnail'
 import {publicationData} from '../../data/publicationData'
 import styles from './publication.module.scss'
 
 export default function Publication() {
     return (
-      <Layout>  
         <section className={styles.publicationWrapper} >
             
             <h1>{publicationData.publication[0].title}</h1>
@@ -25,7 +23,6 @@ export default function Publication() {
                   )
                 }
           </div>
-        </section>    
-      </Layout>
+        </section>
     )
   }

@@ -1,46 +1,66 @@
-import React, {useEffect, useState, useContext} from "react"
-import { ThemeContext } from './ThemeContext'
-import Nav from './Nav'
-import Footer from './Footer'
-import Meta from './Meta'
+'use client';
 
-const Layout = ({ children }) => {
+// components/Layout.jsx
+import { useEffect, useRef, useState, useContext, useCallback } from 'react';
+import { ThemeContext } from './ThemeContext';
+import Nav from './Nav';
+import Footer from './Footer';
+import Meta from './Meta';
 
-  const [prevScrollPos, setPrevScrollPos] = useState(0); 
-  const [visible, setVisible] = useState(true);
+/**
+ * Layout component: hides navbar on scroll‑down, shows on scroll‑up.
+ * Keeps the navbar mounted once to avoid jank.
+ */
+
+export default function Layout({ children }) {
+  /* ─────────────── Theme ─────────────── */
   const { theme, toggleTheme } = useContext(ThemeContext);
 
-  const handleScroll = () => {
-    // find current scroll position
-    const currentScrollPos = window.pageYOffset;
+  /* ───── Scroll position & visibility ───── */
+  const [visible, setVisible] = useState(true);
+  const prevScrollPos = useRef(0);
+  const ticking = useRef(false);
 
-    // set state based on location info (explained in more detail below)
-    setVisible(prevScrollPos > currentScrollPos);
+  /** Compare previous vs current scroll inside rAF */
+  const handleScroll = useCallback(() => {
+    const current = window.scrollY;
 
-    // set state to new scroll position
-    setPrevScrollPos(currentScrollPos);
-  };
+    // ignore tiny scroll noise (<10px)
+    if (Math.abs(current - prevScrollPos.current) < 10) {
+      ticking.current = false;
+      return;
+    }
+
+    // Show nav when scrolling up, hide when scrolling down
+    setVisible(current < prevScrollPos.current);
+    prevScrollPos.current = current;
+    ticking.current = false;
+  }, []);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => {
+      if (!ticking.current) {
+        window.requestAnimationFrame(handleScroll);
+        ticking.current = true;
+      }
+    };
 
-  }, [prevScrollPos, visible, handleScroll])
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [handleScroll]);
 
+  /* ─────────────── Mark‑up ─────────────── */
   return (
     <>
       <Meta />
       <div className={`container ${theme}`}>
-        <div className = {visible ? 'navHolder' : 'navHolder hide'}> <Nav theme_val={theme} toggleTheme_val={toggleTheme} /> </div>
-        
-          <main className='main'>
-            {children}
-          </main>
+        <header className={visible ? 'navHolder' : 'navHolder hide'}>
+          <Nav theme_val={theme} toggleTheme_val={toggleTheme} />
+        </header>
+
+        <main className="main">{children}</main>
         <Footer />
       </div>
     </>
-  )
+  );
 }
-
-export default Layout

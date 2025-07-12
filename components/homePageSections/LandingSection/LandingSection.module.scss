@@ -8,33 +8,32 @@
   .landingSecDataWrapper {
     display: block;
     margin-top: 48px;
-
+    
     .stringsDataWrapper { 
       display: block;
+      position: relative;
       z-index: 10;
+
       h1 {
         text-align: left;
-        z-index: 1;
         margin-bottom: 24px;
-        max-width: 80%;
+      }z
 
-        &:after {
-          position: absolute;
-          z-index: -3;
-          content: '';
+      p {
+        z-index: 1;
+      }
+
+      span {
+        position: absolute;
+          z-index: -10;
           position: absolute;
           height: 200px;
           width: 200px;
           top: -30px;
-          left: -30px;
+          left: -40px;
           border-radius: 100%;
-          background: var(--yellow);
+          background-color: var(--yellow);
         }
-      }
-
-      p {
-        z-index: 2;
-      }
     }
 
     .imageDataWrapper {
@@ -43,39 +42,44 @@
    }
 
 @include for-desktop-only {
-  height: 70vh;
+  height: 80vh;
   overflow: hidden;
   @include displaySettings();
 
   .landingSecDataWrapper {
-    // @include displaySettings();
-    margin-top: 0;
-    // justify-items: center;
-    // align-items: center;
+    display: flex;
     background: unset;
     position: relative;
 
       .stringsDataWrapper {
-        @include stringsWrapperDefault(40%);
         z-index: 1;
+        
+        h {
+          max-width: 80%;
+        }
+        
+        p {
+          @include stringsWrapperDefault(40%);
+        }
+
       }
 
       .imageDataWrapper {
         display: block;
         position: absolute;
-        top: 32px;
-        right: 0px;
+        top: 0px;
+        right: -30px;
+        transform: scale(1);
         // transform: translateY(120px) scale(1);
       }
   }
 }
 
 @include for-desktopX-only {
-  height: vh;
 
   .landingSecDataWrapper {
     .imageDataWrapper {
-      transform: translateY(10px) scale(1.15);
+      transform: translateY(10px) scale(1.2);
     }
   }
 }

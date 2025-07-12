@@ -1,0 +1,369 @@
+@import '/styles/commonStyle.scss';
+
+.kongaWapper {
+    display: block;
+
+    .kongaContentInfo {
+        padding-top: 40px;
+        width: 100%;
+
+        video,img {
+            width: 100%;
+            height: auto;
+        }
+
+        .mobilePadder {
+            padding: 0 24px;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        .role {
+            margin-top: 40px;
+        }
+
+        .sectionHolder {
+            padding-top: 72px;
+
+            .sectionHolderDescription {
+                width: 100%;
+            }
+            .step {
+                border-left: 4px solid var(--textNormal);
+                padding-left: 8px;
+            }
+        }
+
+        ul {
+            margin: 0;
+            li {
+                padding-left: 0;
+                margin: 0 0 40px 20px;
+                list-style: none;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 12px;
+                    left: -18px;
+                    width: 8px;
+                    height: 8px;
+                    background: var(--textNormal);
+                }
+            }
+        }
+
+        .stepOneProcess {
+            .img2 {
+                width: 100%;
+            }
+            
+            h3 {
+                margin-top: 32px;
+            }
+        }
+
+        .stepTwoProcess {
+    
+            .personaSection {
+                display: block;
+                img {
+                    width: 224px;
+                }
+            }
+
+            .stepTwoProcessConclusion {
+                margin-top: 30px;
+            }
+        }
+
+        .workMateHolder {
+            .workMateGroup {
+                display: block;
+            }
+        }
+    }
+
+    .project01StickyNav {
+        display: none;
+    }
+
+    .workMateHolder {
+        margin-bottom: 40px;
+        
+        .workMateGroup {
+            display: flex;
+            flex-direction: row;
+
+            .workMate{
+                display: block;
+                margin-top: 32px;
+
+                // align-items: center;
+
+                img {
+                    width: 124px;
+                    margin: 0;
+                }
+
+                span {
+                    margin-left: 16px;
+                    display: block;
+
+                    b {
+                    display: block;
+                    margin-right: 12px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: rgb(102, 102, 255);
+                    }
+                }  
+            }
+        }
+    }
+
+    @include for-tablet-only {
+
+        .aellaWapper {
+            .kongaContentInfo {
+                .mobilePadder {
+                    padding: 0 40px;
+                }
+    
+                .workMateHolder {
+    
+                    .workMateGroup {
+                        display: flex;
+    
+                        .workMate{
+                            display: flex;
+                            margin: 32px 0;
+                            align-items: center;
+                            // align-items: center;
+            
+                            img {
+                                width: 56px;
+                                margin: 0;
+                            }
+            
+                            span {
+                                margin-left: 16px;
+            
+                                b {
+                                display: block;
+                                margin-right: 12px;
+                                }
+                            }  
+                        }
+                    }
+                }    
+            }
+        } 
+    }
+    
+    @include for-desktop-only() {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 12%;
+        // padding: 0 8% 6% 8%;
+        margin: 0 0 80px;
+    
+        .kongaContentInfo {
+            margin-top: 80px;
+            width: 75%;
+    
+            .mobilePadder {
+                padding: 0;
+            }
+    
+            h1 {
+                font-size: 32px;
+            }
+    
+            .banner {
+                .role {
+                    margin-top: 56px;
+                }
+                .DSexplained {
+                    display: flex;
+                    width: 90%;
+                    align-items: center;
+    
+                    .DSexplainedInfo {
+                        p {
+                            width: 90%;
+                            &:first-child {
+                                color: #EC419C;
+                                font-size: 22px;
+                            }
+                        }
+                    }
+    
+                    .DSexplainedAsset {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        img {
+                        width: 100%;
+                        }
+    
+                        a {
+                            font-size: 14px;
+                            align-self: center;
+                        }
+                    }  
+                }
+            }  
+    
+            .sectionHolder {
+                padding-top: 120px;
+    
+                h3 {
+                    margin-top: 48px;
+                }
+    
+                .sectionHolderDescription {
+                    width: 90%;
+                }
+                .step {
+                    border-left: 4px solid var(--textNormal);
+                    padding-left: 8px;
+                }
+            }
+    
+            .stepOneProcess {
+    
+                .img1 {
+                    width: 70%;
+                }
+                .img2 {
+                    width: 100%;
+                }
+                
+            }
+    
+            .stepTwoProcess {
+
+                img {
+                    width: 100%;
+                    }
+    
+                video {
+                    width: 100%;
+                }
+            }
+    
+            .stepThreeProcess {
+                .stepThreeProcessFlow {
+                    img {
+                    width: 100%;
+                    }
+                }  
+            }
+    
+            .stepFourProcess {
+                img {
+                width: 100%;
+                }
+            }
+    
+            .workMateHolder {
+    
+                .workMateGroup {
+                    display: flex;
+    
+                    .workMate{
+                        display: flex;
+                        margin: 32px 40px 0 0;
+                        align-items: center;
+                        // align-items: center;
+        
+                        img {
+                            width: 56px;
+                            margin: 0;
+                        }
+        
+                        span {
+                            margin-left: 16px;
+        
+                            b {
+                            display: block;
+                            margin-right: 12px;
+                            }
+                        }  
+                    }
+                }
+            }
+        }
+    
+        .project01StickyNav {
+            display: block;
+            width: 15%;
+            border-left: 1px solid rgb(180, 180, 180);
+
+            .project01Button {
+                position: sticky;
+                top: 50%;
+                transform: translate(0, -50%);
+                text-align: right;
+    
+                a {
+                display: block;
+                text-decoration: none;
+                color: rgb(133, 133, 133);
+                font-size: 14px;
+                padding: 8px;
+                border: none;
+                outline: none;
+                position: relative;
+                transform: scale(1);
+                transform-origin: center right;
+                width: 180px;
+                transition: all 0.3s ease;
+                &::before {
+                    transition: all 0.3s ease;
+                    content: '';
+                    width: 3px;
+                    height: 18px;
+                    background: var(--textNormal);
+                    position: absolute;
+                    top: 0;
+                    visibility: hidden;
+                    right: -10px;
+                    opacity: 0;    
+                }
+    
+                &:hover { 
+                    &::before {
+                        visibility: visible;
+                        opacity: 0.4;
+                        top: 40%;
+                        right: -12px;
+                        height: 10px;
+                    }
+                }
+    
+                &.active {
+                        color: var(--textNormal);
+                        &::before {
+                            opacity: 1;
+                            content: '';
+                            width: 3px;
+                            height: 18px;
+                            background: var(--textNormal);
+                            position: absolute;
+                            top: 25%;
+                            visibility: visible;
+                            right: -10px;
+                        }
+                    }
+                }
+            }    
+        }  
+    }
+
+}

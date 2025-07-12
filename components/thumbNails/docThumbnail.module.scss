@@ -43,6 +43,8 @@
 
             img {
                 border-radius: 8px;
+                width: 100%;
+                height: auto;
                 margin: 0;
             }
         }
@@ -73,23 +75,22 @@
     }
 
     @include for-desktop-only() {
+        min-width: 280px;
+    
+        .contentWrapper {   
+            .img_titleWrapper {
+                display: flex;
+                align-items: center;
+                img {
+                    width: 100%;
+                    height: auto;
+                    // margin: 0px 16px 0px 0px;
+                }
+            }
 
-        .docThumbnailGroup {
-            min-width: 280px;
-    
-            .contentWrapper {   
-                .img_titleWrapper {
-                    display: flex;
-                    align-items: center;
-                    img {
-                        margin: 0px 16px 0px 0px;
-                    }
-                }
-    
-                h6 {
-                    font-size: 24px;
-                    // margin: 0;
-                }
+            h6 {
+                font-size: 24px;
+                // margin: 0;
             }
         }
     }

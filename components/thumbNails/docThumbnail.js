@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './docThumbnail.module.scss'
 
 const DocThumbnail = ({title, description, live, tags, link, img, newTab}) => {
@@ -8,8 +9,8 @@ const DocThumbnail = ({title, description, live, tags, link, img, newTab}) => {
         
           <div className={styles.contentWrapper}>
             <div className={styles.img_titleWrapper}>
-              <img src={img} alt="coverImg" />
-              { live ? null : <span>coming soon</span>}
+              <Image src={img} alt="coverImg" />
+              { live ? null : <span>coming soon</span> }
             </div>
   
             <div>

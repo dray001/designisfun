@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link'
+import Image from 'next/image'
 import {NavData} from '../data/navData.js'
 import React, {useState, useEffect} from "react"
 
@@ -50,7 +53,7 @@ const Nav = ({theme_val, toggleTheme_val}) => {
   return (
     <nav className="nav">
       <div className="logo">
-        <Link href='/'>{logo}</Link>
+        <Link href='/'><Image src={logo} alt="coverImg" /></Link>
       </div>
       <ul className="navLinksDeskWrapper">
         {
@@ -62,7 +65,7 @@ const Nav = ({theme_val, toggleTheme_val}) => {
         }
       </ul>
 
-      <div className="socialLinksDeskWrapper">
+      <div className="actionPanelWrapper">
         <ul className="socialLister">
           {
             socialLinks.map((link) => 
@@ -72,25 +75,27 @@ const Nav = ({theme_val, toggleTheme_val}) => {
             )
           }
         </ul>
-          <button onClick={toggleTheme_val}> {theme_val === '' ? sun : moon } </button>
-      </div>
-
-      <div onClick={toggleMenu} className= 'hambugerHolder'>
-        <div className={openState ? 'hambuger open' : 'hambuger' }>
-          <span></span>
-          <span></span>
-          <span></span>
+        
+        <div className = 'actionPanel'>
+          <div onClick={toggleMenu} className={openState ? 'hambuger open' : 'hambuger' }>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          
+          <div className = 'themeSwitcher'>
+            <button onClick={toggleTheme_val}> {theme_val === '' ? sun : moon } </button>
+          </div>
         </div>
       </div>
 
       {/* mobileNavWrapper */}
 
       <div onClick={toggleMenu} className={openState ? 'hambugerModal' : 'hambugerModal off' }>
-        <button onClick={toggleTheme_val}> {theme_val === '' ? sun : moon } </button>
         <div className={openState ? 'mobileNavWrapper on' : 'mobileNavWrapper' }>
           <ul className="navLinksMobileWrapper">
             {
-              navLinks.map((link) => 
+              navLinks.map((link) =>
                 <li>
                   <Link onClick={toggleMenu} href={link.path}> {link.label} </Link>
                 </li>

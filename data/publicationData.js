@@ -35,7 +35,7 @@ export const publicationData = {
                     imgUrl: kongaImg,
                     newTab: false,
                     live: true,
-                    link: '/projects/konga/kongaDesignProcess',
+                    link: '/publications/diology',
                     tags: 'E-commerce, Design system, UIDesign, UXDesign',
                     description: `Konga is one of Nigeria's largest online mall. offering products that span various categories including Phones, Computers, Clothing, Shoes, Home Appliances...`
                 },

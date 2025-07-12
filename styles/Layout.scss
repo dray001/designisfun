@@ -1,7 +1,10 @@
+@import '/styles/commonStyle.scss';
+
 .container {
   width: 100%;
   display: block;
   position: relative;
+  background: var(--white);
 
   &.modalOn {
     height: 100vh;
