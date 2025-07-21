@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // only if you're doing static export
-}
-module.exports = nextConfig
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    domains: ['res.cloudinary.com'], // add any domain you're using for images
+  },
+};
+
+module.exports = nextConfig;

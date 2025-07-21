@@ -1,15 +1,11 @@
 {
-  "homepage": "https://designisfun.github.io/",
   "name": "designisfun",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "export": "next export",
-    "predeploy": "npm run build && npm run export",
-    "deploy": "gh-pages -d out"
+    "start": "next start"
   },
   "dependencies": {
     "@nextui-org/react": "^2.6.11",
@@ -25,7 +21,6 @@
     "typography": "^0.16.19"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0",
     "netlify-cli": "^15.5.1"
   }
 }
