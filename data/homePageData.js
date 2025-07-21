@@ -128,7 +128,7 @@ export const homePageData = {
             image: illustration,
             attendClass: classLink,
             youtubeChannel: youtube,
-            description: `Designisfun is a virtual e-learning platform, that teaches design and how to integrate its principles to 
+            description: `Designisfuun is a virtual e-learning platform, that teaches design and how to integrate its principles to 
             other fields of life or professions such as Product Design, Programming, Graphic Design, etc.`
         },
         {
