@@ -10,8 +10,19 @@ import '../styles/pubPages/diology.scss'
 import '../styles/illustrationsStyles/LandingIllustration.scss'
 
 export const metadata = {
-  title: 'My App',
-  description: 'Made with 💙 by Dray',
+  title: 'Designisfun',
+  description: 'Digital Education made Easy',
+  openGraph: {
+    title: 'Designisfun',
+    description: 'Digital Education made Easy',
+    images: ['/meta/OOD.png'], // Public image path
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Designisfun',
+    description: 'Digital Education made Easy',
+    images: ['/meta/OOD.png'],
+  },
 };
 
 export default function RootLayout({ children }) {
